@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                3a3f36e32c9af4b1ede918b80576397fe40082d6fffc4dd973b7f00fb5beb6ac
+CONFIG_HASH=                ccb8e22f29dfc81fd4ca73233aa7a1c7c3c7cae45eda9bb383627fa03f9fbbc0
 
 
 # ----------------------------------------
@@ -193,7 +193,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  ro omo iao cob
+IMPORTS =  ro omo iao cob cheminf
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -442,6 +442,15 @@ $(IMPORTDIR)/cob_import.owl: $(MIRRORDIR)/cob.owl | all_robot_plugins
 		 repair --merge-axiom-annotations true \
 		 $(ANNOTATE_CONVERT_FILE)
 
+## Module for ontology: cheminf (mirror)
+$(IMPORTDIR)/cheminf_import.owl: $(MIRRORDIR)/cheminf.owl | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --base-iri http://purl.obolibrary.org/obo \
+		               --subset-decls true --synonym-decls true \
+		               --add-source true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
 endif # IMP=true
 
 .PHONY: refresh-imports
@@ -505,6 +514,13 @@ mirror-iao: | $(TMPDIR)
 mirror-cob: | $(TMPDIR)
 	curl -L $(OBOBASE)/cob.owl --create-dirs -o $(TMPDIR)/cob-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) convert -i $(TMPDIR)/cob-download.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: cheminf
+.PHONY: mirror-cheminf
+.PRECIOUS: $(MIRRORDIR)/cheminf.owl
+mirror-cheminf: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/semanticchemistry/semanticchemistry/refs/heads/main/cheminf_ODK/cheminf.owl -o $(TMPDIR)/$@.owl
 
 
 $(MIRRORDIR)/%.owl: mirror-% | $(MIRRORDIR)
