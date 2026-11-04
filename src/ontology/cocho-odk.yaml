@@ -1,0 +1,65 @@
+## ontology metadata ##
+
+
+id: cocho
+title: Computational Chemistry Ontology
+description: "COCHO, the computational chemistry ontology, describes methods and concepts used in computational chemistry research, such as molecular dynamics simulations and quantum mechanical calculations."
+contact:  philip.stroemert@tib.eu
+creators: 
+  - Cardiff University
+  - CPI
+  - FZ Jülich
+  - KIT
+  - MIT Media Lab
+  - NFDI4Chem
+  - RWTH Aachen
+  - TIB
+  - TU Braunschweig
+  - University of Cambridge
+
+
+license: https://creativecommons.org/licenses/by/4.0/
+
+
+## general ODK Settings ##
+
+
+repo: ComputationalChemistryOntology
+git_main_branch: main
+github_org: NFDI4Chem
+ci:
+  - github_actions
+documentation:
+  documentation_system: mkdocs
+use_mappings: true
+export_formats:
+  - owl
+  - obo
+  - json
+reasoner: ELK
+release_artefacts:
+  - full
+  - base
+robot_java_args: '-Xmx16G'  # max RAM to be used by Robot in ODK
+
+
+## COCHO specific Settings ##
+
+
+import_group:
+  products:
+    - id: ro
+      use_base: true
+      slme_individuals: exclude
+    - id: omo
+      module_type: mirror
+    - id: iao
+      module_type: mirror
+    - id: cob
+      module_type: mirror
+    - id: cheminf
+      mirror_from: https://raw.githubusercontent.com/semanticchemistry/semanticchemistry/refs/heads/main/cheminf_ODK/cheminf.owl
+      module_type: mirror
+    - id: molsim
+      mirror_from: https://raw.githubusercontent.com/CPCLab/molsim-ontology/refs/heads/main/molsim.owl
+      module_type: mirror

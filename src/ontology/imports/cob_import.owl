@@ -1,0 +1,747 @@
+Prefix(:=<http://purl.obolibrary.org/obo/cocho/imports/cob_import.owl#>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(terms:=<http://purl.org/dc/terms/>)
+
+
+Ontology(<http://purl.obolibrary.org/obo/cocho/imports/cob_import.owl>
+<http://purl.obolibrary.org/obo/cocho/releases/2026-11-04/imports/cob_import.owl>
+Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/cob/releases/2025-12-15/cob.owl>)
+Annotation(owl:versionInfo "2026-11-04")
+
+Declaration(Class(obo:BFO_0000015))
+Declaration(Class(obo:BFO_0000016))
+Declaration(Class(obo:BFO_0000017))
+Declaration(Class(obo:BFO_0000023))
+Declaration(Class(obo:BFO_0000029))
+Declaration(Class(obo:BFO_0000034))
+Declaration(Class(obo:BFO_0000040))
+Declaration(Class(obo:BFO_0000141))
+Declaration(Class(obo:CHEBI_10545))
+Declaration(Class(obo:CHEBI_24636))
+Declaration(Class(obo:CHEBI_30222))
+Declaration(Class(obo:CHEBI_33252))
+Declaration(Class(obo:CHEBI_36342))
+Declaration(Class(obo:CL_0000000))
+Declaration(Class(obo:COB_0000005))
+Declaration(Class(obo:COB_0000011))
+Declaration(Class(obo:COB_0000013))
+Declaration(Class(obo:COB_0000014))
+Declaration(Class(obo:COB_0000020))
+Declaration(Class(obo:COB_0000021))
+Declaration(Class(obo:COB_0000022))
+Declaration(Class(obo:COB_0000026))
+Declaration(Class(obo:COB_0000032))
+Declaration(Class(obo:COB_0000035))
+Declaration(Class(obo:COB_0000049))
+Declaration(Class(obo:COB_0000056))
+Declaration(Class(obo:COB_0000073))
+Declaration(Class(obo:COB_0000077))
+Declaration(Class(obo:COB_0000080))
+Declaration(Class(obo:COB_0000082))
+Declaration(Class(obo:COB_0000083))
+Declaration(Class(obo:COB_0000110))
+Declaration(Class(obo:COB_0000116))
+Declaration(Class(obo:COB_0000122))
+Declaration(Class(obo:COB_0000502))
+Declaration(Class(obo:COB_0001000))
+Declaration(Class(obo:COB_0001300))
+Declaration(Class(obo:ENVO_01000813))
+Declaration(Class(obo:ENVO_01001110))
+Declaration(Class(obo:ENVO_02500000))
+Declaration(Class(obo:GO_0003674))
+Declaration(Class(obo:GO_0005575))
+Declaration(Class(obo:GO_0008150))
+Declaration(Class(obo:GO_0032991))
+Declaration(Class(obo:GO_0044423))
+Declaration(Class(obo:GO_0110165))
+Declaration(Class(obo:IAO_0000005))
+Declaration(Class(obo:IAO_0000007))
+Declaration(Class(obo:IAO_0000027))
+Declaration(Class(obo:IAO_0000030))
+Declaration(Class(obo:IAO_0000033))
+Declaration(Class(obo:IAO_0000104))
+Declaration(Class(obo:IAO_0000109))
+Declaration(Class(obo:MOP_0000543))
+Declaration(Class(obo:NCBITaxon_10239))
+Declaration(Class(obo:NCBITaxon_131567))
+Declaration(Class(obo:OBI_0000066))
+Declaration(Class(obo:OBI_0000070))
+Declaration(Class(obo:OBI_0000260))
+Declaration(Class(obo:OBI_0200000))
+Declaration(Class(obo:PATO_0000125))
+Declaration(Class(obo:PATO_0002193))
+Declaration(Class(obo:PCO_0000000))
+Declaration(Class(obo:PO_0025131))
+Declaration(Class(obo:PR_000000001))
+Declaration(Class(obo:PR_000018263))
+Declaration(Class(obo:UBERON_0000465))
+Declaration(Class(obo:UBERON_0000466))
+Declaration(Class(obo:UBERON_0001062))
+Declaration(ObjectProperty(obo:BFO_0000050))
+Declaration(ObjectProperty(obo:BFO_0000051))
+Declaration(ObjectProperty(obo:BFO_0000055))
+Declaration(ObjectProperty(obo:COB_0000016))
+Declaration(ObjectProperty(obo:COB_0000081))
+Declaration(ObjectProperty(obo:COB_0000084))
+Declaration(ObjectProperty(obo:COB_0000085))
+Declaration(ObjectProperty(obo:IAO_0000136))
+Declaration(ObjectProperty(obo:OBI_0000293))
+Declaration(ObjectProperty(obo:OBI_0000295))
+Declaration(ObjectProperty(obo:OBI_0000299))
+Declaration(ObjectProperty(obo:OBI_0000312))
+Declaration(ObjectProperty(obo:RO_0000052))
+Declaration(ObjectProperty(obo:RO_0000053))
+Declaration(ObjectProperty(obo:RO_0000056))
+Declaration(ObjectProperty(obo:RO_0000057))
+Declaration(ObjectProperty(obo:RO_0000058))
+Declaration(ObjectProperty(obo:RO_0000059))
+Declaration(ObjectProperty(obo:RO_0001000))
+Declaration(ObjectProperty(obo:RO_0001015))
+Declaration(ObjectProperty(obo:RO_0001025))
+Declaration(ObjectProperty(obo:RO_0002215))
+Declaration(ObjectProperty(obo:RO_0002219))
+Declaration(ObjectProperty(obo:RO_0002221))
+Declaration(ObjectProperty(obo:RO_0002233))
+Declaration(ObjectProperty(obo:RO_0002234))
+Declaration(ObjectProperty(obo:RO_0002333))
+Declaration(DataProperty(obo:COB_0000511))
+Declaration(DataProperty(obo:COB_0000800))
+Declaration(DataProperty(obo:COB_0000801))
+Declaration(DataProperty(obo:COB_0000803))
+Declaration(AnnotationProperty(obo:IAO_0000115))
+Declaration(AnnotationProperty(obo:IAO_0000116))
+Declaration(AnnotationProperty(obo:IAO_0100001))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/source>))
+Declaration(AnnotationProperty(terms:contributor))
+Declaration(AnnotationProperty(terms:description))
+Declaration(AnnotationProperty(terms:license))
+Declaration(AnnotationProperty(terms:title))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: obo:IAO_0000115 (definition)
+
+AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
+
+# Annotation Property: obo:IAO_0000116 (editor note)
+
+AnnotationAssertion(rdfs:label obo:IAO_0000116 "editor note"@en)
+
+# Annotation Property: obo:IAO_0100001 (term replaced by)
+
+AnnotationAssertion(rdfs:label obo:IAO_0100001 "term replaced by"@en)
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: obo:BFO_0000050 (part of)
+
+AnnotationAssertion(obo:IAO_0000115 obo:BFO_0000050 "a core relation that holds between a part and its whole"@en)
+AnnotationAssertion(rdfs:label obo:BFO_0000050 "part of"@en)
+
+# Object Property: obo:BFO_0000051 (has part)
+
+AnnotationAssertion(obo:IAO_0000115 obo:BFO_0000051 "a core relation that holds between a whole and its part"@en)
+AnnotationAssertion(rdfs:label obo:BFO_0000051 "has part"@en)
+
+# Object Property: obo:BFO_0000055 (realizes)
+
+AnnotationAssertion(obo:IAO_0000115 obo:BFO_0000055 "Paraphrase of elucidation: a relation between a process and a realizable entity, where there is some material entity that is bearer of the realizable entity and participates in the process, and the realizable entity comes to be realized in the course of the process"@en)
+AnnotationAssertion(rdfs:label obo:BFO_0000055 "realizes"@en)
+ObjectPropertyDomain(obo:BFO_0000055 obo:BFO_0000015)
+ObjectPropertyRange(obo:BFO_0000055 obo:BFO_0000017)
+
+# Object Property: obo:COB_0000016 (executed by)
+
+AnnotationAssertion(rdfs:label obo:COB_0000016 "executed by"@en)
+
+# Object Property: obo:COB_0000081 (intended to realize)
+
+AnnotationAssertion(rdfs:label obo:COB_0000081 "intended to realize"@en)
+
+# Object Property: obo:COB_0000084 (has plan)
+
+AnnotationAssertion(rdfs:label obo:COB_0000084 "has plan"@en)
+
+# Object Property: obo:COB_0000085 (intended plan process type)
+
+AnnotationAssertion(rdfs:label obo:COB_0000085 "intended plan process type"@en)
+
+# Object Property: obo:IAO_0000136 (is about)
+
+AnnotationAssertion(rdfs:label obo:IAO_0000136 "is about"@en)
+ObjectPropertyDomain(obo:IAO_0000136 obo:IAO_0000030)
+
+# Object Property: obo:OBI_0000293 (has specified input)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000293 "The inverse property of is specified input of")
+AnnotationAssertion(rdfs:label obo:OBI_0000293 "has specified input"@en)
+ObjectPropertyDomain(obo:OBI_0000293 obo:COB_0000035)
+
+# Object Property: obo:OBI_0000295 (is specified input of)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000295 "A relation between a completely executed planned process and a continuant participating in that process that is not created during the process. The presence of the continuant during the process is explicitly specified in the plan specification which the process realizes the concretization of.")
+AnnotationAssertion(rdfs:label obo:OBI_0000295 "is specified input of"@en)
+ObjectPropertyRange(obo:OBI_0000295 obo:COB_0000035)
+
+# Object Property: obo:OBI_0000299 (has specified output)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000299 "The inverse property of is specified output of")
+AnnotationAssertion(rdfs:label obo:OBI_0000299 "has specified output"@en)
+ObjectPropertyDomain(obo:OBI_0000299 obo:COB_0000035)
+
+# Object Property: obo:OBI_0000312 (is specified output of)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000312 "A relation between a completely executed planned process and a continuant participating in that process. The presence of the continuant at the end of the process is explicitly specified in the objective specification which the process realizes the concretization of."@en)
+AnnotationAssertion(rdfs:label obo:OBI_0000312 "is specified output of"@en)
+ObjectPropertyRange(obo:OBI_0000312 obo:COB_0000035)
+
+# Object Property: obo:RO_0000052 (characteristic of)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0000052 "a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence."@en)
+AnnotationAssertion(rdfs:label obo:RO_0000052 "characteristic of"@en)
+
+# Object Property: obo:RO_0000053 (has characteristic)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0000053 "Inverse of characteristic_of"@en)
+AnnotationAssertion(rdfs:label obo:RO_0000053 "has characteristic"@en)
+
+# Object Property: obo:RO_0000056 (participates in)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0000056 "a relation between a continuant and a process, in which the continuant is somehow involved in the process"@en)
+AnnotationAssertion(rdfs:label obo:RO_0000056 "participates in"@en)
+
+# Object Property: obo:RO_0000057 (has participant)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0000057 "a relation between a process and a continuant, in which the continuant is somehow involved in the process"@en)
+AnnotationAssertion(rdfs:label obo:RO_0000057 "has participant"@en)
+
+# Object Property: obo:RO_0000058 (is concretized as)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0000058 "A relationship between a generically dependent continuant and a specifically dependent continuant, in which the generically dependent continuant depends on some independent continuant in virtue of the fact that the specifically dependent continuant also depends on that same independent continuant. A generically dependent continuant may be concretized as multiple specifically dependent continuants."@en)
+AnnotationAssertion(rdfs:label obo:RO_0000058 "is concretized as"@en)
+
+# Object Property: obo:RO_0000059 (concretizes)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0000059 "A relationship between a specifically dependent continuant and a generically dependent continuant, in which the generically dependent continuant depends on some independent continuant in virtue of the fact that the specifically dependent continuant also depends on that same independent continuant. Multiple specifically dependent continuants can concretize the same generically dependent continuant."@en)
+AnnotationAssertion(rdfs:label obo:RO_0000059 "concretizes"@en)
+
+# Object Property: obo:RO_0001000 (derives from)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0001000 "a relation between two distinct material entities, the new entity and the old entity, in which the new entity begins to exist when the old entity ceases to exist, and the new entity inherits the significant portion of the matter of the old entity"@en)
+AnnotationAssertion(rdfs:label obo:RO_0001000 "derives from"@en)
+
+# Object Property: obo:RO_0001015 (location of)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0001015 "a relation between two independent continuants, the location and the target, in which the target is entirely within the location"@en)
+AnnotationAssertion(rdfs:label obo:RO_0001015 "location of"@en)
+
+# Object Property: obo:RO_0001025 (located in)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0001025 "a relation between two independent continuants, the target and the location, in which the target is entirely within the location"@en)
+AnnotationAssertion(rdfs:label obo:RO_0001025 "located in"@en)
+
+# Object Property: obo:RO_0002215 (capable of)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0002215 "A relation between a material entity (such as a cell) and a process, in which the material entity has the ability to carry out the process.")
+AnnotationAssertion(rdfs:label obo:RO_0002215 "capable of"@en)
+ObjectPropertyRange(obo:RO_0002215 obo:BFO_0000015)
+
+# Object Property: obo:RO_0002219 (surrounded by)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0002219 "x surrounded_by y if and only if (1) x is adjacent to y and for every region r that is adjacent to x, r overlaps y (2) the shared boundary between x and y occupies the majority of the outermost boundary of x")
+AnnotationAssertion(rdfs:label obo:RO_0002219 "surrounded by"@en)
+
+# Object Property: obo:RO_0002221 (surrounds)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0002221 "inverse of surrounded by")
+AnnotationAssertion(rdfs:label obo:RO_0002221 "surrounds"@en)
+
+# Object Property: obo:RO_0002233 (has input)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0002233 "p has input c iff: p is a process, c is a material entity, c is a participant in p, c is present at the start of p, and the state of c is modified during p.")
+AnnotationAssertion(rdfs:label obo:RO_0002233 "has input"@en)
+ObjectPropertyDomain(obo:RO_0002233 obo:BFO_0000015)
+
+# Object Property: obo:RO_0002234 (has output)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0002234 "p has output c iff c is a participant in p, c is present at the end of p, and c is not present in the same state at the beginning of p.")
+AnnotationAssertion(rdfs:label obo:RO_0002234 "has output"@en)
+
+# Object Property: obo:RO_0002333 (enabled by)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0002333 "inverse of enables")
+AnnotationAssertion(rdfs:label obo:RO_0002333 "enabled by"@en)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: obo:COB_0000511 (has quantity)
+
+AnnotationAssertion(rdfs:label obo:COB_0000511 "has quantity"@en)
+
+# Data Property: obo:COB_0000800 (has atomic number)
+
+AnnotationAssertion(obo:IAO_0000115 obo:COB_0000800 "Number of protons in an atomic nucleus"@en)
+AnnotationAssertion(rdfs:label obo:COB_0000800 "has atomic number"@en)
+DataPropertyDomain(obo:COB_0000800 obo:COB_0000011)
+
+# Data Property: obo:COB_0000801 (has number of atomic nuclei)
+
+AnnotationAssertion(rdfs:label obo:COB_0000801 "has number of atomic nuclei"@en)
+DataPropertyDomain(obo:COB_0000801 obo:BFO_0000040)
+
+# Data Property: obo:COB_0000803 (has inchi string)
+
+AnnotationAssertion(rdfs:label obo:COB_0000803 "has inchi string"@en)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: obo:BFO_0000015 (process)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000015 "process"@en)
+
+# Class: obo:BFO_0000016 (disposition)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000016 "disposition"@en)
+SubClassOf(obo:BFO_0000016 obo:BFO_0000017)
+
+# Class: obo:BFO_0000017 (realizable entity)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000017 "realizable entity"@en)
+SubClassOf(obo:BFO_0000017 obo:COB_0000502)
+
+# Class: obo:BFO_0000023 (role)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000023 "role"@en)
+SubClassOf(obo:BFO_0000023 obo:BFO_0000017)
+
+# Class: obo:BFO_0000029 (site)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000029 "site"@en)
+SubClassOf(obo:BFO_0000029 obo:BFO_0000141)
+
+# Class: obo:BFO_0000034 (function)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000034 "function"@en)
+SubClassOf(obo:BFO_0000034 obo:BFO_0000016)
+
+# Class: obo:BFO_0000040 (material entity)
+
+AnnotationAssertion(obo:IAO_0000116 obo:BFO_0000040 "Elucidation: An independent continuant that is spatially extended whose identity is independent of that of other entities and can be maintained through time."@en)
+AnnotationAssertion(rdfs:label obo:BFO_0000040 "material entity"@en)
+
+# Class: obo:BFO_0000141 (immaterial entity)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000141 "immaterial entity"@en)
+
+# Class: obo:CHEBI_10545 (electron)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CHEBI_10545 "Elementary particle not affected by the strong force having a spin 1/2, a negative elementary charge and a rest mass of 0.000548579903(13) u, or 0.51099906(15) MeV.")
+AnnotationAssertion(rdfs:label obo:CHEBI_10545 "electron")
+SubClassOf(obo:CHEBI_10545 obo:CHEBI_36342)
+
+# Class: obo:CHEBI_24636 (proton)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CHEBI_24636 "Nuclear particle of charge number +1, spin 1/2 and rest mass of 1.007276470(12) u.")
+AnnotationAssertion(rdfs:label obo:CHEBI_24636 "proton")
+SubClassOf(obo:CHEBI_24636 obo:CHEBI_36342)
+
+# Class: obo:CHEBI_30222 (neutron)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CHEBI_30222 "Nuclear particle of zero charge, spin 1/2 and rest mass of 1.008664904(14) u.")
+AnnotationAssertion(rdfs:label obo:CHEBI_30222 "neutron")
+SubClassOf(obo:CHEBI_30222 obo:CHEBI_36342)
+
+# Class: obo:CHEBI_33252 (atomic nucleus)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CHEBI_33252 "A nucleus is the positively charged central portion of an atom, excluding the orbital electrons.")
+AnnotationAssertion(obo:IAO_0000116 obo:CHEBI_33252 "Some people may be uncomfortable calling every proton an atomic nucleus"@en)
+AnnotationAssertion(obo:IAO_0000116 obo:CHEBI_33252 "This is equivalent to CHEBI:33252"@en)
+AnnotationAssertion(rdfs:label obo:CHEBI_33252 "atomic nucleus")
+SubClassOf(obo:CHEBI_33252 obo:CHEBI_36342)
+SubClassOf(obo:CHEBI_33252 ObjectSomeValuesFrom(obo:BFO_0000051 obo:CHEBI_24636))
+
+# Class: obo:CHEBI_36342 (subatomic particle)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CHEBI_36342 "A particle smaller than an atom.")
+AnnotationAssertion(rdfs:label obo:CHEBI_36342 "subatomic particle")
+SubClassOf(obo:CHEBI_36342 obo:BFO_0000040)
+DisjointClasses(obo:CHEBI_36342 obo:COB_0000011)
+
+# Class: obo:CL_0000000 (cell)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CL_0000000 "A material entity of anatomical origin (part of or deriving from an organism) that has as its parts a maximally connected cell compartment surrounded by a plasma membrane.")
+AnnotationAssertion(obo:IAO_0000116 obo:CL_0000000 "CL and GO definitions of cell differ based on inclusive or exclusive of cell wall, etc."@en)
+AnnotationAssertion(obo:IAO_0000116 obo:CL_0000000 "We struggled with this definition. We are worried about circularity. We also considered requiring the capability of metabolism."@en)
+AnnotationAssertion(rdfs:label obo:CL_0000000 "cell")
+SubClassOf(obo:CL_0000000 obo:UBERON_0000465)
+
+# Class: obo:COB_0000005 (obsolete elementary charge)
+
+AnnotationAssertion(rdfs:label obo:COB_0000005 "obsolete elementary charge")
+AnnotationAssertion(owl:deprecated obo:COB_0000005 "true"^^xsd:boolean)
+
+# Class: obo:COB_0000011 (atom)
+
+AnnotationAssertion(obo:IAO_0000115 obo:COB_0000011 "A material entity consisting of exactly one atomic nucleus and the electron(s) orbiting it."@en)
+AnnotationAssertion(obo:IAO_0000116 obo:COB_0000011 "This atom is closely related to ChEBI's atom, but not exactly equivalent to."@en)
+AnnotationAssertion(rdfs:label obo:COB_0000011 "atom"@en)
+SubClassOf(obo:COB_0000011 obo:BFO_0000040)
+SubClassOf(obo:COB_0000011 ObjectSomeValuesFrom(obo:BFO_0000051 obo:CHEBI_33252))
+DisjointClasses(obo:COB_0000011 obo:COB_0000013)
+
+# Class: obo:COB_0000013 (molecule)
+
+AnnotationAssertion(obo:IAO_0000115 obo:COB_0000013 "A material entity that consists of two or more atoms that are all connected via covalent bonds such that any atom can be transitively connected with any other atom."@en)
+AnnotationAssertion(obo:IAO_0000116 obo:COB_0000013 "This molecular entity is different than ChEBI's 'molecular entity'."@en)
+AnnotationAssertion(obo:IAO_0000116 obo:COB_0000013 "We would like to have cardinality restrictions on the logic, but there are some technical limitations."@en)
+AnnotationAssertion(rdfs:label obo:COB_0000013 "molecule"@en)
+SubClassOf(obo:COB_0000013 obo:BFO_0000040)
+SubClassOf(obo:COB_0000013 ObjectSomeValuesFrom(obo:BFO_0000051 obo:COB_0000011))
+
+# Class: obo:COB_0000014 (obsolete macromolecular entity)
+
+AnnotationAssertion(rdfs:label obo:COB_0000014 "obsolete macromolecular entity")
+AnnotationAssertion(owl:deprecated obo:COB_0000014 "true"^^xsd:boolean)
+
+# Class: obo:COB_0000020 (obsolete subcellular structure)
+
+AnnotationAssertion(obo:IAO_0100001 obo:COB_0000020 obo:GO_0110165)
+AnnotationAssertion(rdfs:label obo:COB_0000020 "obsolete subcellular structure")
+AnnotationAssertion(owl:deprecated obo:COB_0000020 "true"^^xsd:boolean)
+
+# Class: obo:COB_0000021 (gross anatomical part)
+
+AnnotationAssertion(obo:IAO_0000115 obo:COB_0000021 "A part of a multicellular organism that is a collection of cell components that are not all contained in one cell."@en)
+AnnotationAssertion(rdfs:label obo:COB_0000021 "gross anatomical part"@en)
+SubClassOf(obo:COB_0000021 obo:UBERON_0000465)
+
+# Class: obo:COB_0000022 (organism)
+
+AnnotationAssertion(obo:IAO_0000115 obo:COB_0000022 "A material entity that is a maximal functionally integrated unit that develops from a program encoded in a genome"@en)
+AnnotationAssertion(obo:IAO_0000116 obo:COB_0000022 "'Maximal functionally integrated unit' is intended to express unity, which Barry considers synonymous with BFO 'object'."@en)
+AnnotationAssertion(obo:IAO_0000116 obo:COB_0000022 "Includes virus - we will later have a class for cellular organisms."@en)
+AnnotationAssertion(rdfs:label obo:COB_0000022 "organism"@en)
+SubClassOf(obo:COB_0000022 obo:UBERON_0000465)
+
+# Class: obo:COB_0000026 (processed material entity)
+
+AnnotationAssertion(obo:IAO_0000115 obo:COB_0000026 "A material entity processed by human activity with an intent to produce it."@en)
+AnnotationAssertion(obo:IAO_0000116 obo:COB_0000026 "In the COB 2024 workshop there was much disagreement about this label."@en)
+AnnotationAssertion(rdfs:label obo:COB_0000026 "processed material entity"@en)
+SubClassOf(obo:COB_0000026 obo:BFO_0000040)
+SubClassOf(obo:COB_0000026 ObjectSomeValuesFrom(obo:OBI_0000312 obo:COB_0000110))
+
+# Class: obo:COB_0000032 (obsolete geographical location)
+
+AnnotationAssertion(rdfs:label obo:COB_0000032 "obsolete geographical location")
+AnnotationAssertion(owl:deprecated obo:COB_0000032 "true"^^xsd:boolean)
+
+# Class: obo:COB_0000035 (completely executed planned process)
+
+AnnotationAssertion(rdfs:label obo:COB_0000035 "completely executed planned process"@en)
+SubClassOf(obo:COB_0000035 obo:COB_0000082)
+SubClassOf(obo:COB_0000035 ObjectSomeValuesFrom(obo:BFO_0000055 obo:OBI_0000260))
+DisjointClasses(obo:COB_0000035 obo:COB_0000083)
+
+# Class: obo:COB_0000049 (nucleic acid chain)
+
+AnnotationAssertion(obo:IAO_0000115 obo:COB_0000049 "A molecule that consists of nucleotides (unmodified nucleotide residues and/or modified nucleotide residues) linked by phosphodiester bonds or derivatives of such bonds."@en)
+AnnotationAssertion(rdfs:label obo:COB_0000049 "nucleic acid chain"@en)
+SubClassOf(obo:COB_0000049 obo:COB_0000013)
+
+# Class: obo:COB_0000056 (obsolete immaterial anatomical entity)
+
+AnnotationAssertion(obo:IAO_0100001 obo:COB_0000056 obo:UBERON_0000466)
+AnnotationAssertion(rdfs:label obo:COB_0000056 "obsolete immaterial anatomical entity")
+AnnotationAssertion(owl:deprecated obo:COB_0000056 "true"^^xsd:boolean)
+
+# Class: obo:COB_0000073 (obsolete gene product)
+
+AnnotationAssertion(rdfs:label obo:COB_0000073 "obsolete gene product")
+AnnotationAssertion(owl:deprecated obo:COB_0000073 "true"^^xsd:boolean)
+
+# Class: obo:COB_0000077 (obsolete action specification)
+
+AnnotationAssertion(obo:IAO_0100001 obo:COB_0000077 obo:IAO_0000007)
+AnnotationAssertion(rdfs:label obo:COB_0000077 "obsolete action specification")
+AnnotationAssertion(owl:deprecated obo:COB_0000077 "true"^^xsd:boolean)
+
+# Class: obo:COB_0000080 (complex of molecules)
+
+AnnotationAssertion(obo:IAO_0000115 obo:COB_0000080 "A complex of two or more molecules that are not covalently bound."@en)
+AnnotationAssertion(rdfs:label obo:COB_0000080 "complex of molecules"@en)
+SubClassOf(obo:COB_0000080 obo:BFO_0000040)
+SubClassOf(obo:COB_0000080 ObjectSomeValuesFrom(obo:BFO_0000051 obo:COB_0000013))
+
+# Class: obo:COB_0000082 (planned process)
+
+AnnotationAssertion(obo:IAO_0000115 obo:COB_0000082 "A process that is initiated by an agent who intends to carry out a plan to achieve an objective through one or more actions as described in a plan specification."@en)
+AnnotationAssertion(rdfs:label obo:COB_0000082 "planned process"@en)
+SubClassOf(obo:COB_0000082 obo:BFO_0000015)
+
+# Class: obo:COB_0000083 (failed planned process)
+
+AnnotationAssertion(rdfs:label obo:COB_0000083 "failed planned process"@en)
+SubClassOf(obo:COB_0000083 obo:COB_0000082)
+
+# Class: obo:COB_0000110 (material processing)
+
+AnnotationAssertion(obo:IAO_0000115 obo:COB_0000110 "A completely executed planned process that intends to output material entities from input material entities"@en)
+AnnotationAssertion(rdfs:label obo:COB_0000110 "material processing"@en)
+SubClassOf(obo:COB_0000110 obo:COB_0000035)
+SubClassOf(obo:COB_0000110 ObjectIntersectionOf(ObjectSomeValuesFrom(obo:OBI_0000293 obo:BFO_0000040) ObjectSomeValuesFrom(obo:OBI_0000299 obo:BFO_0000040)))
+
+# Class: obo:COB_0000116 (obsolete cellular membrane)
+
+AnnotationAssertion(rdfs:label obo:COB_0000116 "obsolete cellular membrane")
+AnnotationAssertion(owl:deprecated obo:COB_0000116 "true"^^xsd:boolean)
+
+# Class: obo:COB_0000122 (obsolete physical information carrier)
+
+AnnotationAssertion(rdfs:label obo:COB_0000122 "obsolete physical information carrier")
+AnnotationAssertion(owl:deprecated obo:COB_0000122 "true"^^xsd:boolean)
+
+# Class: obo:COB_0000502 (characteristic)
+
+AnnotationAssertion(rdfs:label obo:COB_0000502 "characteristic"@en)
+
+# Class: obo:COB_0001000 (exposure of organism)
+
+AnnotationAssertion(obo:IAO_0000115 obo:COB_0001000 "A process during which an organism comes into contact with another entity."@en)
+AnnotationAssertion(rdfs:label obo:COB_0001000 "exposure of organism"@en)
+SubClassOf(obo:COB_0001000 obo:BFO_0000015)
+SubClassOf(obo:COB_0001000 ObjectSomeValuesFrom(obo:RO_0000057 obo:COB_0000022))
+
+# Class: obo:COB_0001300 (device)
+
+AnnotationAssertion(obo:IAO_0000115 obo:COB_0001300 "A processed material entity which is designed to be capable of a process."@en)
+AnnotationAssertion(rdfs:label obo:COB_0001300 "device"@en)
+SubClassOf(obo:COB_0001300 obo:COB_0000026)
+SubClassOf(obo:COB_0001300 ObjectSomeValuesFrom(obo:RO_0002215 obo:BFO_0000015))
+
+# Class: obo:ENVO_01000813 (geophysical entity)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ENVO_01000813 "A material part of an astronomical body.")
+AnnotationAssertion(rdfs:label obo:ENVO_01000813 "geophysical entity"@en)
+SubClassOf(obo:ENVO_01000813 obo:BFO_0000040)
+
+# Class: obo:ENVO_01001110 (ecosystem)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ENVO_01001110 "An environmental system which includes both living and non-living components.")
+AnnotationAssertion(rdfs:label obo:ENVO_01001110 "ecosystem"@en)
+SubClassOf(obo:ENVO_01001110 obo:BFO_0000040)
+
+# Class: obo:ENVO_02500000 (environmental system process)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ENVO_02500000 "A process in which includes the components of an environmental system as participants.")
+AnnotationAssertion(rdfs:label obo:ENVO_02500000 "environmental system process"@en)
+SubClassOf(obo:ENVO_02500000 obo:BFO_0000015)
+
+# Class: obo:GO_0003674 (gene product or complex activity)
+
+AnnotationAssertion(obo:IAO_0000115 obo:GO_0003674 "A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs.")
+AnnotationAssertion(obo:IAO_0000116 obo:GO_0003674 "This is the same as GO molecular function"@en)
+AnnotationAssertion(rdfs:label obo:GO_0003674 "gene product or complex activity"@en)
+SubClassOf(obo:GO_0003674 obo:BFO_0000015)
+
+# Class: obo:GO_0005575 (cellular_component)
+
+AnnotationAssertion(obo:IAO_0000115 obo:GO_0005575 "A location, relative to cellular compartments and structures, occupied by a macromolecular machine. There are three types of cellular components described in the gene ontology: (1) the cellular anatomical entity where a gene product carries out a molecular function (e.g., plasma membrane, cytoskeleton) or membrane-enclosed compartments (e.g., mitochondrion); (2) virion components, where viral proteins act, and (3) the stable macromolecular complexes of which gene product are parts (e.g., the clathrin complex).")
+AnnotationAssertion(rdfs:label obo:GO_0005575 "cellular_component")
+EquivalentClasses(obo:GO_0005575 ObjectUnionOf(obo:GO_0032991 obo:GO_0044423 obo:GO_0110165))
+SubClassOf(obo:GO_0005575 obo:BFO_0000040)
+
+# Class: obo:GO_0008150 (biological process)
+
+AnnotationAssertion(obo:IAO_0000115 obo:GO_0008150 "A biological process is the execution of a genetically-encoded biological module or program. It consists of all the steps required to achieve the specific biological objective of the module. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence.")
+AnnotationAssertion(rdfs:label obo:GO_0008150 "biological process"@en)
+SubClassOf(obo:GO_0008150 obo:BFO_0000015)
+SubClassOf(obo:GO_0008150 ObjectSomeValuesFrom(obo:BFO_0000051 obo:GO_0003674))
+
+# Class: obo:GO_0032991 (protein-containing complex)
+
+AnnotationAssertion(obo:IAO_0000115 obo:GO_0032991 "A stable assembly of two or more macromolecules, i.e. proteins, nucleic acids, carbohydrates or lipids, in which at least one component is a protein and the constituent parts function together.")
+AnnotationAssertion(obo:IAO_0000116 obo:GO_0032991 "This is not covalently bonded, which conflicts with changes to the parent definition."@en)
+AnnotationAssertion(rdfs:label obo:GO_0032991 "protein-containing complex")
+SubClassOf(obo:GO_0032991 obo:COB_0000080)
+SubClassOf(obo:GO_0032991 obo:GO_0005575)
+SubClassOf(obo:GO_0032991 ObjectSomeValuesFrom(obo:BFO_0000051 obo:PR_000000001))
+
+# Class: obo:GO_0044423 (virion component)
+
+AnnotationAssertion(obo:IAO_0000115 obo:GO_0044423 "Any constituent part of a virion, a complete fully infectious extracellular virus particle.")
+AnnotationAssertion(rdfs:label obo:GO_0044423 "virion component")
+SubClassOf(obo:GO_0044423 obo:GO_0005575)
+
+# Class: obo:GO_0110165 (cellular anatomical entity)
+
+AnnotationAssertion(obo:IAO_0000115 obo:GO_0110165 "A part of a cellular organism that is either an immaterial entity or a material entity with granularity above the level of a protein complex but below that of an anatomical system. Or, a substance produced by a cellular organism with granularity above the level of a protein complex.")
+AnnotationAssertion(obo:IAO_0000116 obo:GO_0110165 "Components are larger than individual macromolecular entities. It is tricky to define distinction between 'cell component' and 'macromolecular entity', e.g. ribosome. We would like to exclude most protein complexes."@en)
+AnnotationAssertion(obo:IAO_0000116 obo:GO_0110165 "Overlaps with some cellular components from GO"@en)
+AnnotationAssertion(rdfs:label obo:GO_0110165 "cellular anatomical entity")
+SubClassOf(obo:GO_0110165 obo:GO_0005575)
+SubClassOf(obo:GO_0110165 obo:UBERON_0000465)
+SubClassOf(obo:GO_0110165 ObjectSomeValuesFrom(obo:BFO_0000051 obo:COB_0000013))
+
+# Class: obo:IAO_0000005 (objective specification)
+
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000005 "A directive information entity that describes an intended process endpoint. When part of a plan specification the concretization is realized in a planned process in which the bearer tries to effect the world so that the process endpoint is achieved."@en)
+AnnotationAssertion(rdfs:label obo:IAO_0000005 "objective specification"@en)
+SubClassOf(obo:IAO_0000005 obo:IAO_0000033)
+
+# Class: obo:IAO_0000007 (action specification)
+
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000007 "A directive information entity that describes an action the bearer will take."@en)
+AnnotationAssertion(rdfs:label obo:IAO_0000007 "action specification"@en)
+SubClassOf(obo:IAO_0000007 obo:IAO_0000033)
+
+# Class: obo:IAO_0000027 (data item)
+
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000027 "An information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements."@en)
+AnnotationAssertion(rdfs:label obo:IAO_0000027 "data item"@en)
+SubClassOf(obo:IAO_0000027 obo:IAO_0000030)
+
+# Class: obo:IAO_0000030 (information content entity)
+
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000030 "A generically dependent continuant that is about some thing."@en)
+AnnotationAssertion(obo:IAO_0000116 obo:IAO_0000030 "Pier: 'data, information or knowledge'. OR 'representation'"@en)
+AnnotationAssertion(rdfs:label obo:IAO_0000030 "information content entity"@en)
+
+# Class: obo:IAO_0000033 (directive information entity)
+
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000033 "An information content entity whose concretizations indicate to their bearer how to realize them in a process."@en)
+AnnotationAssertion(rdfs:label obo:IAO_0000033 "directive information entity"@en)
+SubClassOf(obo:IAO_0000033 obo:IAO_0000030)
+
+# Class: obo:IAO_0000104 (plan specification)
+
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000104 "A directive information entity with action specifications and objective specifications as parts, and that may be concretized as a realizable entity that, if realized, is realized in a process in which the bearer tries to achieve the objectives by taking the actions specified."@en)
+AnnotationAssertion(rdfs:label obo:IAO_0000104 "plan specification"@en)
+SubClassOf(obo:IAO_0000104 obo:IAO_0000033)
+
+# Class: obo:IAO_0000109 (measurement datum)
+
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000109 "A measurement datum is an information content entity that is a recording of the output of a measurement such as produced by a device."@en)
+AnnotationAssertion(rdfs:label obo:IAO_0000109 "measurement datum"@en)
+SubClassOf(obo:IAO_0000109 obo:IAO_0000027)
+
+# Class: obo:MOP_0000543 (physico-chemical process)
+
+AnnotationAssertion(obo:IAO_0000115 obo:MOP_0000543 "A process in which at least one of the participants is a molecule.")
+AnnotationAssertion(obo:IAO_0000116 obo:MOP_0000543 "This is meant to capture processes that are more fundamental than macromolecular activities"@en)
+AnnotationAssertion(rdfs:label obo:MOP_0000543 "physico-chemical process")
+SubClassOf(obo:MOP_0000543 obo:BFO_0000015)
+
+# Class: obo:NCBITaxon_10239 (virus)
+
+AnnotationAssertion(rdfs:label obo:NCBITaxon_10239 "virus"@en)
+SubClassOf(obo:NCBITaxon_10239 obo:COB_0000022)
+
+# Class: obo:NCBITaxon_131567 (cellular organism)
+
+AnnotationAssertion(rdfs:label obo:NCBITaxon_131567 "cellular organism")
+SubClassOf(obo:NCBITaxon_131567 obo:COB_0000022)
+
+# Class: obo:OBI_0000066 (investigation)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000066 "a planned process that consists of parts: planning, study design execution, documentation and which produce conclusion(s)."@en)
+AnnotationAssertion(rdfs:label obo:OBI_0000066 "investigation"@en)
+SubClassOf(obo:OBI_0000066 obo:COB_0000035)
+
+# Class: obo:OBI_0000070 (assay)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000070 "A planned process that has the objective to produce information about a material entity (the evaluant) by examining it."@en)
+AnnotationAssertion(rdfs:label obo:OBI_0000070 "assay"@en)
+SubClassOf(obo:OBI_0000070 obo:COB_0000035)
+SubClassOf(obo:OBI_0000070 ObjectIntersectionOf(ObjectSomeValuesFrom(obo:OBI_0000293 obo:BFO_0000040) ObjectSomeValuesFrom(obo:OBI_0000299 obo:IAO_0000027)))
+
+# Class: obo:OBI_0000260 (plan)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000260 "A plan is a realizable entity that is the inheres in a bearer who is committed to realizing it as a completely executed planned process."@en)
+AnnotationAssertion(rdfs:label obo:OBI_0000260 "plan"@en)
+SubClassOf(obo:OBI_0000260 obo:BFO_0000017)
+SubClassOf(obo:OBI_0000260 ObjectSomeValuesFrom(obo:RO_0000059 obo:IAO_0000104))
+
+# Class: obo:OBI_0200000 (data transformation)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0200000 "A completely executed planned process that produces output data from input data."@en)
+AnnotationAssertion(rdfs:label obo:OBI_0200000 "data transformation"@en)
+SubClassOf(obo:OBI_0200000 obo:COB_0000035)
+SubClassOf(obo:OBI_0200000 ObjectIntersectionOf(ObjectSomeValuesFrom(obo:OBI_0000293 obo:IAO_0000027) ObjectSomeValuesFrom(obo:OBI_0000299 obo:IAO_0000027)))
+
+# Class: obo:PATO_0000125 (mass)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PATO_0000125 "A physical quality that inheres in a bearer by virtue of the proportion of the bearer's amount of matter.")
+AnnotationAssertion(rdfs:label obo:PATO_0000125 "mass")
+SubClassOf(obo:PATO_0000125 obo:COB_0000502)
+
+# Class: obo:PATO_0002193 (electric charge)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PATO_0002193 "A molecular quality that inheres in a molecular entity by virtue of the overall electric charge of the molecule, which is due to a comparison between the total number of electrons and the total number of protons.")
+AnnotationAssertion(rdfs:label obo:PATO_0002193 "electric charge")
+SubClassOf(obo:PATO_0002193 obo:COB_0000502)
+
+# Class: obo:PCO_0000000 (collection of organisms)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PCO_0000000 "A material entity that consists of two or more organisms, viruses, or viroids."@en)
+AnnotationAssertion(rdfs:label obo:PCO_0000000 "collection of organisms"@en)
+SubClassOf(obo:PCO_0000000 obo:BFO_0000040)
+SubClassOf(obo:PCO_0000000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:COB_0000022))
+
+# Class: obo:PO_0025131 (plant anatomical entity)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PO_0025131 "An anatomical entity that is or was part of a plant.")
+AnnotationAssertion(rdfs:label obo:PO_0025131 "plant anatomical entity")
+SubClassOf(obo:PO_0025131 obo:UBERON_0000465)
+
+# Class: obo:PR_000000001 (protein)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PR_000000001 "An amino acid chain that is produced de novo by ribosome-mediated translation of a genetically-encoded mRNA, and any derivatives thereof.")
+AnnotationAssertion(rdfs:label obo:PR_000000001 "protein")
+SubClassOf(obo:PR_000000001 obo:PR_000018263)
+
+# Class: obo:PR_000018263 (amino acid chain)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PR_000018263 "An organic amino compound that consists of amino acid residues (unmodified amino-acid residues and/or modified amino-acid residues) linked by peptide bonds or derivatives of such bonds.")
+AnnotationAssertion(rdfs:label obo:PR_000018263 "amino acid chain")
+SubClassOf(obo:PR_000018263 obo:COB_0000013)
+
+# Class: obo:UBERON_0000465 (material anatomical entity)
+
+AnnotationAssertion(obo:IAO_0000115 obo:UBERON_0000465 "Anatomical entity that has mass.")
+AnnotationAssertion(rdfs:label obo:UBERON_0000465 "material anatomical entity")
+EquivalentClasses(obo:UBERON_0000465 ObjectUnionOf(obo:CL_0000000 obo:COB_0000021 obo:COB_0000022 obo:GO_0110165))
+SubClassOf(obo:UBERON_0000465 obo:BFO_0000040)
+SubClassOf(obo:UBERON_0000465 obo:UBERON_0001062)
+
+# Class: obo:UBERON_0000466 (immaterial anatomical entity)
+
+AnnotationAssertion(obo:IAO_0000115 obo:UBERON_0000466 "Anatomical entity that has no mass.")
+AnnotationAssertion(rdfs:label obo:UBERON_0000466 "immaterial anatomical entity")
+SubClassOf(obo:UBERON_0000466 obo:BFO_0000141)
+SubClassOf(obo:UBERON_0000466 obo:UBERON_0001062)
+
+# Class: obo:UBERON_0001062 (anatomical entity)
+
+AnnotationAssertion(obo:IAO_0000115 obo:UBERON_0001062 "Biological entity that is either an individual member of a biological species or constitutes the structural organization of an individual member of a biological species.")
+AnnotationAssertion(rdfs:label obo:UBERON_0001062 "anatomical entity")
+EquivalentClasses(obo:UBERON_0001062 ObjectUnionOf(obo:UBERON_0000465 obo:UBERON_0000466))
+
+
+)
