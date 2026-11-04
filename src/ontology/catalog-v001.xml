@@ -6,5 +6,6 @@
     <uri name="http://purl.obolibrary.org/obo/cocho/imports/iao_import.owl" uri="imports/iao_import.owl" />
     <uri name="http://purl.obolibrary.org/obo/cocho/imports/cob_import.owl" uri="imports/cob_import.owl" />
     <uri name="http://purl.obolibrary.org/obo/cocho/imports/cheminf_import.owl" uri="imports/cheminf_import.owl" />
+    <uri name="http://purl.obolibrary.org/obo/cocho/imports/molsim_import.owl" uri="imports/molsim_import.owl" />
   </group>
 </catalog>

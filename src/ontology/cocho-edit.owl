@@ -12,6 +12,7 @@ Ontology(<http://purl.obolibrary.org/obo/cocho.owl>
 Import(<http://purl.obolibrary.org/obo/cocho/imports/cheminf_import.owl>)
 Import(<http://purl.obolibrary.org/obo/cocho/imports/cob_import.owl>)
 Import(<http://purl.obolibrary.org/obo/cocho/imports/iao_import.owl>)
+Import(<http://purl.obolibrary.org/obo/cocho/imports/molsim_import.owl>)
 Import(<http://purl.obolibrary.org/obo/cocho/imports/omo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/cocho/imports/ro_import.owl>)
 Annotation(dcterms:description "COCHO, the computational chemistry ontology, describes methods and concepts used in computational chemistry research, such as molecular dynamics simulations and quantum mechanical calculations.")

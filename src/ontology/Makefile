@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                ccb8e22f29dfc81fd4ca73233aa7a1c7c3c7cae45eda9bb383627fa03f9fbbc0
+CONFIG_HASH=                aad3fc33996bb86c8e88b63f38e727fd02d56f5bb48dd90d4cd60e50ed248d98
 
 
 # ----------------------------------------
@@ -193,7 +193,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  ro omo iao cob cheminf
+IMPORTS =  ro omo iao cob cheminf molsim
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -451,6 +451,15 @@ $(IMPORTDIR)/cheminf_import.owl: $(MIRRORDIR)/cheminf.owl | all_robot_plugins
 		 repair --merge-axiom-annotations true \
 		 $(ANNOTATE_CONVERT_FILE)
 
+## Module for ontology: molsim (mirror)
+$(IMPORTDIR)/molsim_import.owl: $(MIRRORDIR)/molsim.owl | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --base-iri http://purl.obolibrary.org/obo \
+		               --subset-decls true --synonym-decls true \
+		               --add-source true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
 endif # IMP=true
 
 .PHONY: refresh-imports
@@ -521,6 +530,13 @@ mirror-cob: | $(TMPDIR)
 .PRECIOUS: $(MIRRORDIR)/cheminf.owl
 mirror-cheminf: | $(TMPDIR)
 	$(ROBOT) convert -I https://raw.githubusercontent.com/semanticchemistry/semanticchemistry/refs/heads/main/cheminf_ODK/cheminf.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: molsim
+.PHONY: mirror-molsim
+.PRECIOUS: $(MIRRORDIR)/molsim.owl
+mirror-molsim: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/CPCLab/molsim-ontology/refs/heads/main/molsim.owl -o $(TMPDIR)/$@.owl
 
 
 $(MIRRORDIR)/%.owl: mirror-% | $(MIRRORDIR)

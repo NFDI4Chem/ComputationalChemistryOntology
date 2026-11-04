@@ -60,3 +60,6 @@ import_group:
     - id: cheminf
       mirror_from: https://raw.githubusercontent.com/semanticchemistry/semanticchemistry/refs/heads/main/cheminf_ODK/cheminf.owl
       module_type: mirror
+    - id: molsim
+      mirror_from: https://raw.githubusercontent.com/CPCLab/molsim-ontology/refs/heads/main/molsim.owl
+      module_type: mirror
