@@ -611,10 +611,10 @@ AnnotationAssertion(rdfs:comment obo:COCHO_IsAtomProperty "A generic atomic prop
 AnnotationAssertion(rdfs:label obo:COCHO_IsAtomProperty "Atom Property"@en)
 SubObjectPropertyOf(obo:COCHO_IsAtomProperty obo:COCHO_extraGCObjectProperty)
 
-# Object Property: obo:COCHO_IsSystemProperty (System Property)
+# Object Property: obo:COCHO_IsSystemProperty (Is System Property)
 
 AnnotationAssertion(rdfs:comment obo:COCHO_IsSystemProperty "A generic system property"@en)
-AnnotationAssertion(rdfs:label obo:COCHO_IsSystemProperty "System Property"@en)
+AnnotationAssertion(rdfs:label obo:COCHO_IsSystemProperty "Is System Property"@en)
 SubObjectPropertyOf(obo:COCHO_IsSystemProperty obo:COCHO_extraGCObjectProperty)
 
 # Object Property: obo:COCHO_binds (the act of binding of atoms)
@@ -1136,10 +1136,10 @@ AnnotationAssertion(rdfs:label obo:COCHO_hasMultipleDeterminant "Multiple Determ
 SubObjectPropertyOf(obo:COCHO_hasMultipleDeterminant obo:COCHO_extraGCObjectProperty)
 ObjectPropertyDomain(obo:COCHO_hasMultipleDeterminant obo:COCHO_Bond)
 
-# Object Property: obo:COCHO_hasMultipleReferenceState (Multiple Reference State)
+# Object Property: obo:COCHO_hasMultipleReferenceState (has Multiple Reference State)
 
 AnnotationAssertion(rdfs:comment obo:COCHO_hasMultipleReferenceState "A property that describes Multiple Reference State"@en)
-AnnotationAssertion(rdfs:label obo:COCHO_hasMultipleReferenceState "Multiple Reference State"@en)
+AnnotationAssertion(rdfs:label obo:COCHO_hasMultipleReferenceState "has Multiple Reference State"@en)
 SubObjectPropertyOf(obo:COCHO_hasMultipleReferenceState obo:COCHO_extraGCObjectProperty)
 ObjectPropertyDomain(obo:COCHO_hasMultipleReferenceState obo:COCHO_MolecularSystem)
 
@@ -1358,10 +1358,10 @@ AnnotationAssertion(rdfs:label obo:COCHO_hasSingleDeterminantType "Single Determ
 SubObjectPropertyOf(obo:COCHO_hasSingleDeterminantType obo:COCHO_extraGCObjectProperty)
 ObjectPropertyDomain(obo:COCHO_hasSingleDeterminantType obo:COCHO_QuantumMechanics)
 
-# Object Property: obo:COCHO_hasSingleReferenceState (Single Reference State)
+# Object Property: obo:COCHO_hasSingleReferenceState (has Single Reference State)
 
 AnnotationAssertion(rdfs:comment obo:COCHO_hasSingleReferenceState "A property ..."@en)
-AnnotationAssertion(rdfs:label obo:COCHO_hasSingleReferenceState "Single Reference State"@en)
+AnnotationAssertion(rdfs:label obo:COCHO_hasSingleReferenceState "has Single Reference State"@en)
 SubObjectPropertyOf(obo:COCHO_hasSingleReferenceState obo:COCHO_extraGCObjectProperty)
 ObjectPropertyDomain(obo:COCHO_hasSingleReferenceState obo:COCHO_QuantumMechanics)
 
@@ -1426,10 +1426,10 @@ AnnotationAssertion(rdfs:label obo:COCHO_hasSystemMultiplicity "has system multi
 SubObjectPropertyOf(obo:COCHO_hasSystemMultiplicity obo:COCHO_hasMolecularFeature)
 ObjectPropertyDomain(obo:COCHO_hasSystemMultiplicity obo:COCHO_MolecularSystem)
 
-# Object Property: obo:COCHO_hasSystemProperty (System Property)
+# Object Property: obo:COCHO_hasSystemProperty (has System Property)
 
 AnnotationAssertion(rdfs:comment obo:COCHO_hasSystemProperty "A property ..."@en)
-AnnotationAssertion(rdfs:label obo:COCHO_hasSystemProperty "System Property"@en)
+AnnotationAssertion(rdfs:label obo:COCHO_hasSystemProperty "has System Property"@en)
 SubObjectPropertyOf(obo:COCHO_hasSystemProperty obo:COCHO_extraGCObjectProperty)
 ObjectPropertyDomain(obo:COCHO_hasSystemProperty obo:COCHO_CalculatedProperty)
 ObjectPropertyRange(obo:COCHO_hasSystemProperty obo:COCHO_CalculatedSystemProperties)
