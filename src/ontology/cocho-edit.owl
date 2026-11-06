@@ -4193,7 +4193,7 @@ ClassAssertion(qudt:ChemistryUnit obo:COCHO_kmPerMol)
 
 AnnotationAssertion(rdfs:comment obo:COCHO_Mm+ "MM+ force field."@en)
 AnnotationAssertion(rdfs:label obo:COCHO_Mm+ "Mm+")
-ClassAssertion(obo:COCHO_ForceField obo:COCHO_Mm+>)
+ClassAssertion(obo:COCHO_ForceField obo:COCHO_Mm+)
 
 
 SubObjectPropertyOf(ObjectPropertyChain(obo:COCHO_hasResidue obo:COCHO_hasAtom) obo:COCHO_hasAtom)
