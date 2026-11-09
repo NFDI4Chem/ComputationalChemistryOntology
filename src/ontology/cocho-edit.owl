@@ -337,7 +337,6 @@ Declaration(ObjectProperty(obo:COCHO_hasBasisSet))
 Declaration(ObjectProperty(obo:COCHO_hasBindingEnergy))
 Declaration(ObjectProperty(obo:COCHO_hasBond))
 Declaration(ObjectProperty(obo:COCHO_hasBondLength))
-Declaration(ObjectProperty(obo:COCHO_hasBondOrder))
 Declaration(ObjectProperty(obo:COCHO_hasBondType))
 Declaration(ObjectProperty(obo:COCHO_hasCalculatedAtomCharge))
 Declaration(ObjectProperty(obo:COCHO_hasCalculation))
@@ -373,7 +372,6 @@ Declaration(ObjectProperty(obo:COCHO_hasIRSpectrum))
 Declaration(ObjectProperty(obo:COCHO_hasIntegerVector))
 Declaration(ObjectProperty(obo:COCHO_hasIntensity))
 Declaration(ObjectProperty(obo:COCHO_hasKeyword))
-Declaration(ObjectProperty(obo:COCHO_hasMass))
 Declaration(ObjectProperty(obo:COCHO_hasMathML))
 Declaration(ObjectProperty(obo:COCHO_hasMathMLEquation))
 Declaration(ObjectProperty(obo:COCHO_hasMethodology))
@@ -385,7 +383,6 @@ Declaration(ObjectProperty(obo:COCHO_hasMolecularSystem))
 Declaration(ObjectProperty(obo:COCHO_hasMolecule))
 Declaration(ObjectProperty(obo:COCHO_hasMoleculeProperty))
 Declaration(ObjectProperty(obo:COCHO_hasMullikenCharges))
-Declaration(ObjectProperty(obo:COCHO_hasMultipleDeterminant))
 Declaration(ObjectProperty(obo:COCHO_hasMultipleReferenceState))
 Declaration(ObjectProperty(obo:COCHO_hasNmrShieldingAnisotropy))
 Declaration(ObjectProperty(obo:COCHO_hasNmrShieldingIsotropic))
@@ -393,12 +390,9 @@ Declaration(ObjectProperty(obo:COCHO_hasNormalMode))
 Declaration(ObjectProperty(obo:COCHO_hasNuclearRepulsionEnergy))
 Declaration(ObjectProperty(obo:COCHO_hasNumberBasisFunc))
 Declaration(ObjectProperty(obo:COCHO_hasOccupancy))
-Declaration(ObjectProperty(obo:COCHO_hasOccupiedOrbitalsIncluded))
 Declaration(ObjectProperty(obo:COCHO_hasOpenShellTreatment))
 Declaration(ObjectProperty(obo:COCHO_hasOrbital))
-Declaration(ObjectProperty(obo:COCHO_hasOrbitalCount))
 Declaration(ObjectProperty(obo:COCHO_hasOrbitalEnergy))
-Declaration(ObjectProperty(obo:COCHO_hasOrbitalSymmetry))
 Declaration(ObjectProperty(obo:COCHO_hasOscillatorStrength))
 Declaration(ObjectProperty(obo:COCHO_hasOutputFile))
 Declaration(ObjectProperty(obo:COCHO_hasParameter))
@@ -421,14 +415,10 @@ Declaration(ObjectProperty(obo:COCHO_hasSourcePackage))
 Declaration(ObjectProperty(obo:COCHO_hasSpinType))
 Declaration(ObjectProperty(obo:COCHO_hasSystemCharge))
 Declaration(ObjectProperty(obo:COCHO_hasSystemEnergiesResult))
-Declaration(ObjectProperty(obo:COCHO_hasSystemMultiplicity))
 Declaration(ObjectProperty(obo:COCHO_hasSystemProperty))
 Declaration(ObjectProperty(obo:COCHO_hasSystemTemperature))
 Declaration(ObjectProperty(obo:COCHO_hasTotalPotentialEnergy))
-Declaration(ObjectProperty(obo:COCHO_hasTransitionCount))
 Declaration(ObjectProperty(obo:COCHO_hasUnit))
-Declaration(ObjectProperty(obo:COCHO_hasUnoccupiedOrbitalsIncluded))
-Declaration(ObjectProperty(obo:COCHO_hasVibrationCount))
 Declaration(ObjectProperty(obo:COCHO_hasWaveFunctionCoefficients))
 Declaration(ObjectProperty(obo:COCHO_hasXYPoint))
 Declaration(ObjectProperty(obo:COCHO_holds))
@@ -735,13 +725,6 @@ SubObjectPropertyOf(obo:COCHO_hasBondLength obo:COCHO_hasMolecularProperty)
 ObjectPropertyDomain(obo:COCHO_hasBondLength obo:COCHO_Bond)
 ObjectPropertyRange(obo:COCHO_hasBondLength obo:COCHO_FloatValue)
 
-# Object Property: obo:COCHO_hasBondOrder (Bond order)
-
-AnnotationAssertion(rdfs:comment obo:COCHO_hasBondOrder "A property that specifies bond order."@en)
-AnnotationAssertion(rdfs:label obo:COCHO_hasBondOrder "Bond order"@en)
-SubObjectPropertyOf(obo:COCHO_hasBondOrder obo:COCHO_extraGCObjectProperty)
-ObjectPropertyDomain(obo:COCHO_hasBondOrder obo:COCHO_Bond)
-
 # Object Property: obo:COCHO_hasBondType (Bond Type)
 
 AnnotationAssertion(rdfs:comment obo:COCHO_hasBondType "A property that describes Bond Type"@en)
@@ -1033,16 +1016,6 @@ AnnotationAssertion(rdfs:comment obo:COCHO_hasKeyword "A property describes keyw
 AnnotationAssertion(rdfs:label obo:COCHO_hasKeyword "Keyword"@en)
 SubObjectPropertyOf(obo:COCHO_hasKeyword obo:COCHO_extraGCObjectProperty)
 
-# Object Property: obo:COCHO_hasMass (Mass of a molecular entity)
-
-AnnotationAssertion(rdfs:comment obo:COCHO_hasMass "A property ..."@en)
-AnnotationAssertion(rdfs:label obo:COCHO_hasMass "Mass of a molecular entity"@en)
-SubObjectPropertyOf(obo:COCHO_hasMass obo:COCHO_extraGCObjectProperty)
-ObjectPropertyDomain(obo:COCHO_hasMass obo:COCHO_Atom)
-ObjectPropertyDomain(obo:COCHO_hasMass obo:COCHO_MolecularSystem)
-ObjectPropertyDomain(obo:COCHO_hasMass obo:COCHO_Molecule)
-ObjectPropertyRange(obo:COCHO_hasMass obo:COCHO_hasFloatValue)
-
 # Object Property: obo:COCHO_hasMathML (Math ML)
 
 AnnotationAssertion(rdfs:comment obo:COCHO_hasMathML "A property that specifies MathML object."@en)
@@ -1129,13 +1102,6 @@ SubObjectPropertyOf(obo:COCHO_hasMullikenCharges obo:COCHO_hasResult)
 ObjectPropertyDomain(obo:COCHO_hasMullikenCharges obo:COCHO_CalculatedAtomProperties)
 ObjectPropertyRange(obo:COCHO_hasMullikenCharges obo:COCHO_FloatValue)
 
-# Object Property: obo:COCHO_hasMultipleDeterminant (Multiple Determinant)
-
-AnnotationAssertion(rdfs:comment obo:COCHO_hasMultipleDeterminant "A property that specifies Multiple Determinant."@en)
-AnnotationAssertion(rdfs:label obo:COCHO_hasMultipleDeterminant "Multiple Determinant"@en)
-SubObjectPropertyOf(obo:COCHO_hasMultipleDeterminant obo:COCHO_extraGCObjectProperty)
-ObjectPropertyDomain(obo:COCHO_hasMultipleDeterminant obo:COCHO_Bond)
-
 # Object Property: obo:COCHO_hasMultipleReferenceState (has Multiple Reference State)
 
 AnnotationAssertion(rdfs:comment obo:COCHO_hasMultipleReferenceState "A property that describes Multiple Reference State"@en)
@@ -1196,14 +1162,6 @@ SubObjectPropertyOf(obo:COCHO_hasOccupancy obo:COCHO_hasResult)
 ObjectPropertyDomain(obo:COCHO_hasOccupancy obo:COCHO_Orbital)
 ObjectPropertyRange(obo:COCHO_hasOccupancy obo:COCHO_FloatValue)
 
-# Object Property: obo:COCHO_hasOccupiedOrbitalsIncluded (has occupied orbitals included)
-
-AnnotationAssertion(rdfs:comment obo:COCHO_hasOccupiedOrbitalsIncluded "A property that describes the inclusion of occupied orbitals in electronic spectra calculations."@en)
-AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_hasOccupiedOrbitalsIncluded <http://chemicalsemantics.com/>)
-AnnotationAssertion(rdfs:label obo:COCHO_hasOccupiedOrbitalsIncluded "has occupied orbitals included"@en)
-SubObjectPropertyOf(obo:COCHO_hasOccupiedOrbitalsIncluded obo:COCHO_hasMolecularFeature)
-ObjectPropertyDomain(obo:COCHO_hasOccupiedOrbitalsIncluded obo:COCHO_ElectronicSpectra)
-
 # Object Property: obo:COCHO_hasOpenShellTreatment (has open shell treatment)
 
 AnnotationAssertion(rdfs:comment obo:COCHO_hasOpenShellTreatment "A property that describes the treatment of open shell systems."@en)
@@ -1220,13 +1178,6 @@ SubObjectPropertyOf(obo:COCHO_hasOrbital obo:COCHO_hasResult)
 ObjectPropertyDomain(obo:COCHO_hasOrbital obo:COCHO_WaveFunction)
 ObjectPropertyRange(obo:COCHO_hasOrbital obo:COCHO_Orbital)
 
-# Object Property: obo:COCHO_hasOrbitalCount (has orbital count)
-
-AnnotationAssertion(rdfs:comment obo:COCHO_hasOrbitalCount "A property that defines the number of electron orbitals"@en)
-AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_hasOrbitalCount <http://chemicalsemantics.com/>)
-AnnotationAssertion(rdfs:label obo:COCHO_hasOrbitalCount "has orbital count"@en)
-SubObjectPropertyOf(obo:COCHO_hasOrbitalCount obo:COCHO_hasMolecularFeature)
-
 # Object Property: obo:COCHO_hasOrbitalEnergy (has orbital energy)
 
 AnnotationAssertion(rdfs:comment obo:COCHO_hasOrbitalEnergy "A property that describes the orbital energy."@en)
@@ -1235,14 +1186,6 @@ AnnotationAssertion(rdfs:label obo:COCHO_hasOrbitalEnergy "has orbital energy"@e
 SubObjectPropertyOf(obo:COCHO_hasOrbitalEnergy obo:COCHO_hasResult)
 ObjectPropertyDomain(obo:COCHO_hasOrbitalEnergy obo:COCHO_Orbital)
 ObjectPropertyRange(obo:COCHO_hasOrbitalEnergy obo:COCHO_FloatValue)
-
-# Object Property: obo:COCHO_hasOrbitalSymmetry (has orbital symmetry)
-
-AnnotationAssertion(rdfs:comment obo:COCHO_hasOrbitalSymmetry "A property that defines Orbital symmetry"@en)
-AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_hasOrbitalSymmetry <http://chemicalsemantics.com/>)
-AnnotationAssertion(rdfs:label obo:COCHO_hasOrbitalSymmetry "has orbital symmetry"@en)
-SubObjectPropertyOf(obo:COCHO_hasOrbitalSymmetry obo:COCHO_hasMolecularFeature)
-ObjectPropertyDomain(obo:COCHO_hasOrbitalSymmetry obo:COCHO_Orbital)
 
 # Object Property: obo:COCHO_hasOscillatorStrength (has oscillator strength)
 
@@ -1418,14 +1361,6 @@ AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_hasSystemEnergiesResult <http://c
 AnnotationAssertion(rdfs:label obo:COCHO_hasSystemEnergiesResult "has system energies result"@en)
 SubObjectPropertyOf(obo:COCHO_hasSystemEnergiesResult obo:COCHO_hasResult)
 
-# Object Property: obo:COCHO_hasSystemMultiplicity (has system multiplicity)
-
-AnnotationAssertion(rdfs:comment obo:COCHO_hasSystemMultiplicity "A property that describes the system spin multiplicity."@en)
-AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_hasSystemMultiplicity <http://chemicalsemantics.com/>)
-AnnotationAssertion(rdfs:label obo:COCHO_hasSystemMultiplicity "has system multiplicity"@en)
-SubObjectPropertyOf(obo:COCHO_hasSystemMultiplicity obo:COCHO_hasMolecularFeature)
-ObjectPropertyDomain(obo:COCHO_hasSystemMultiplicity obo:COCHO_MolecularSystem)
-
 # Object Property: obo:COCHO_hasSystemProperty (has System Property)
 
 AnnotationAssertion(rdfs:comment obo:COCHO_hasSystemProperty "A property ..."@en)
@@ -1452,15 +1387,6 @@ SubObjectPropertyOf(obo:COCHO_hasTotalPotentialEnergy obo:COCHO_hasSystemEnergie
 ObjectPropertyDomain(obo:COCHO_hasTotalPotentialEnergy obo:COCHO_SystemEnergies)
 ObjectPropertyRange(obo:COCHO_hasTotalPotentialEnergy obo:COCHO_FloatValue)
 
-# Object Property: obo:COCHO_hasTransitionCount (has transition count)
-
-AnnotationAssertion(rdfs:comment obo:COCHO_hasTransitionCount "A property that describes the number of the electronic transitions in spectral calculations."@en)
-AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_hasTransitionCount <http://chemicalsemantics.com/>)
-AnnotationAssertion(rdfs:label obo:COCHO_hasTransitionCount "has transition count"@en)
-SubObjectPropertyOf(obo:COCHO_hasTransitionCount obo:COCHO_hasMolecularFeature)
-FunctionalObjectProperty(obo:COCHO_hasTransitionCount)
-ObjectPropertyDomain(obo:COCHO_hasTransitionCount obo:COCHO_ElectronicSpectra)
-
 # Object Property: obo:COCHO_hasUnit (has unit)
 
 AnnotationAssertion(rdfs:comment obo:COCHO_hasUnit "A property that describes a unit of the value."@en)
@@ -1469,22 +1395,6 @@ AnnotationAssertion(rdfs:label obo:COCHO_hasUnit "has unit"@en)
 SubObjectPropertyOf(obo:COCHO_hasUnit obo:COCHO_hasAuxiliaryProperty)
 FunctionalObjectProperty(obo:COCHO_hasUnit)
 ObjectPropertyDomain(obo:COCHO_hasUnit obo:COCHO_Value)
-
-# Object Property: obo:COCHO_hasUnoccupiedOrbitalsIncluded (has unoccupied orbitals included)
-
-AnnotationAssertion(rdfs:comment obo:COCHO_hasUnoccupiedOrbitalsIncluded "A property that describes the inclusion of occupied orbitals in electronic spectra calculations."@en)
-AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_hasUnoccupiedOrbitalsIncluded <http://chemicalsemantics.com/>)
-AnnotationAssertion(rdfs:label obo:COCHO_hasUnoccupiedOrbitalsIncluded "has unoccupied orbitals included"@en)
-SubObjectPropertyOf(obo:COCHO_hasUnoccupiedOrbitalsIncluded obo:COCHO_hasMolecularFeature)
-ObjectPropertyDomain(obo:COCHO_hasUnoccupiedOrbitalsIncluded obo:COCHO_ElectronicSpectra)
-
-# Object Property: obo:COCHO_hasVibrationCount (has vibration count)
-
-AnnotationAssertion(rdfs:comment obo:COCHO_hasVibrationCount "A property that describes the number of vibrational frequencies."@en)
-AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_hasVibrationCount <http://chemicalsemantics.com/>)
-AnnotationAssertion(rdfs:label obo:COCHO_hasVibrationCount "has vibration count"@en)
-SubObjectPropertyOf(obo:COCHO_hasVibrationCount obo:COCHO_hasMolecularFeature)
-FunctionalObjectProperty(obo:COCHO_hasVibrationCount)
 
 # Object Property: obo:COCHO_hasWaveFunctionCoefficients (has wave function coefficients)
 
@@ -1601,9 +1511,12 @@ SubDataPropertyOf(obo:COCHO_hasBondCount obo:COCHO_hasMolecularData)
 DataPropertyDomain(obo:COCHO_hasBondCount ObjectUnionOf(obo:COCHO_Atom obo:COCHO_Molecule obo:COCHO_Residue))
 DataPropertyRange(obo:COCHO_hasBondCount xsd:nonNegativeInteger)
 
-# Data Property: obo:COCHO_hasBondOrder (Bond order)
+# Data Property: obo:COCHO_hasBondOrder (has Bond order)
 
-DataPropertyRange(obo:COCHO_hasBondOrder xsd:positiveInteger)
+AnnotationAssertion(rdfs:comment obo:COCHO_hasBondOrder "A property that specifies bond order."@en)
+AnnotationAssertion(rdfs:label obo:COCHO_hasBondOrder "has Bond order"@en)
+DataPropertyDomain(obo:COCHO_hasBondOrder obo:COCHO_Bond)
+DataPropertyRange(obo:COCHO_hasBondOrder xsd:decimal)
 
 # Data Property: obo:COCHO_hasCategory (has category)
 
@@ -1748,7 +1661,10 @@ DataPropertyRange(obo:COCHO_hasLastName xsd:string)
 
 # Data Property: obo:COCHO_hasMass (Mass of a molecular entity)
 
-SubDataPropertyOf(obo:COCHO_hasMass obo:COCHO_hasMolecularData)
+AnnotationAssertion(rdfs:comment obo:COCHO_hasMass "A property ..."@en)
+AnnotationAssertion(rdfs:label obo:COCHO_hasMass "has Mass of a molecular entity"@en)
+DataPropertyDomain(obo:COCHO_hasMass ObjectUnionOf(obo:COCHO_Atom obo:COCHO_MolecularSystem obo:COCHO_Molecule))
+DataPropertyRange(obo:COCHO_hasMass xsd:float)
 
 # Data Property: obo:COCHO_hasMethod (has method)
 
@@ -1779,8 +1695,11 @@ AnnotationAssertion(rdfs:label obo:COCHO_hasMolecularData "Generic Datatype Prop
 
 SubDataPropertyOf(obo:COCHO_hasMolecularMechanics obo:COCHO_extraGCDataProperty)
 
-# Data Property: obo:COCHO_hasMultipleDeterminant (Multiple Determinant)
+# Data Property: obo:COCHO_hasMultipleDeterminant (has Multiple Determinant)
 
+AnnotationAssertion(rdfs:comment obo:COCHO_hasMultipleDeterminant "A property that specifies Multiple Determinant."@en)
+AnnotationAssertion(rdfs:label obo:COCHO_hasMultipleDeterminant "has Multiple Determinant"@en)
+DataPropertyDomain(obo:COCHO_hasMultipleDeterminant obo:COCHO_Bond)
 DataPropertyRange(obo:COCHO_hasMultipleDeterminant xsd:positiveInteger)
 
 # Data Property: obo:COCHO_hasName (has name)
@@ -1818,6 +1737,10 @@ SubDataPropertyOf(obo:COCHO_hasNumberOfAtoms obo:COCHO_hasMolecularData)
 
 # Data Property: obo:COCHO_hasOccupiedOrbitalsIncluded (has occupied orbitals included)
 
+AnnotationAssertion(rdfs:comment obo:COCHO_hasOccupiedOrbitalsIncluded "A property that describes the inclusion of occupied orbitals in electronic spectra calculations."@en)
+AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_hasOccupiedOrbitalsIncluded <http://chemicalsemantics.com/>)
+AnnotationAssertion(rdfs:label obo:COCHO_hasOccupiedOrbitalsIncluded "has occupied orbitals included"@en)
+DataPropertyDomain(obo:COCHO_hasOccupiedOrbitalsIncluded obo:COCHO_ElectronicSpectra)
 DataPropertyRange(obo:COCHO_hasOccupiedOrbitalsIncluded xsd:int)
 
 # Data Property: obo:COCHO_hasOpenShellTreatment (has open shell treatment)
@@ -1826,10 +1749,17 @@ DataPropertyRange(obo:COCHO_hasOpenShellTreatment rdfs:Literal)
 
 # Data Property: obo:COCHO_hasOrbitalCount (has orbital count)
 
+AnnotationAssertion(rdfs:comment obo:COCHO_hasOrbitalCount "A property that defines the number of electron orbitals"@en)
+AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_hasOrbitalCount <http://chemicalsemantics.com/>)
+AnnotationAssertion(rdfs:label obo:COCHO_hasOrbitalCount "has orbital count"@en)
 DataPropertyRange(obo:COCHO_hasOrbitalCount xsd:int)
 
 # Data Property: obo:COCHO_hasOrbitalSymmetry (has orbital symmetry)
 
+AnnotationAssertion(rdfs:comment obo:COCHO_hasOrbitalSymmetry "A property that defines Orbital symmetry"@en)
+AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_hasOrbitalSymmetry <http://chemicalsemantics.com/>)
+AnnotationAssertion(rdfs:label obo:COCHO_hasOrbitalSymmetry "has orbital symmetry"@en)
+DataPropertyDomain(obo:COCHO_hasOrbitalSymmetry obo:COCHO_Orbital)
 DataPropertyRange(obo:COCHO_hasOrbitalSymmetry xsd:string)
 
 # Data Property: obo:COCHO_hasOrganization (has organization)
@@ -1912,6 +1842,10 @@ DataPropertyRange(obo:COCHO_hasStatus xsd:string)
 
 # Data Property: obo:COCHO_hasSystemMultiplicity (has system multiplicity)
 
+AnnotationAssertion(rdfs:comment obo:COCHO_hasSystemMultiplicity "A property that describes the system spin multiplicity."@en)
+AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_hasSystemMultiplicity <http://chemicalsemantics.com/>)
+AnnotationAssertion(rdfs:label obo:COCHO_hasSystemMultiplicity "has system multiplicity"@en)
+DataPropertyDomain(obo:COCHO_hasSystemMultiplicity obo:COCHO_MolecularSystem)
 DataPropertyRange(obo:COCHO_hasSystemMultiplicity xsd:positiveInteger)
 
 # Data Property: obo:COCHO_hasTag (Tag for the calculation)
@@ -1938,10 +1872,18 @@ SubDataPropertyOf(obo:COCHO_hasTextValue obo:COCHO_extraGCDataProperty)
 
 # Data Property: obo:COCHO_hasTransitionCount (has transition count)
 
+AnnotationAssertion(rdfs:comment obo:COCHO_hasTransitionCount "A property that describes the number of the electronic transitions in spectral calculations."@en)
+AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_hasTransitionCount <http://chemicalsemantics.com/>)
+AnnotationAssertion(rdfs:label obo:COCHO_hasTransitionCount "has transition count"@en)
+DataPropertyDomain(obo:COCHO_hasTransitionCount obo:COCHO_ElectronicSpectra)
 DataPropertyRange(obo:COCHO_hasTransitionCount xsd:int)
 
 # Data Property: obo:COCHO_hasUnoccupiedOrbitalsIncluded (has unoccupied orbitals included)
 
+AnnotationAssertion(rdfs:comment obo:COCHO_hasUnoccupiedOrbitalsIncluded "A property that describes the inclusion of occupied orbitals in electronic spectra calculations."@en)
+AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_hasUnoccupiedOrbitalsIncluded <http://chemicalsemantics.com/>)
+AnnotationAssertion(rdfs:label obo:COCHO_hasUnoccupiedOrbitalsIncluded "has unoccupied orbitals included"@en)
+DataPropertyDomain(obo:COCHO_hasUnoccupiedOrbitalsIncluded obo:COCHO_ElectronicSpectra)
 DataPropertyRange(obo:COCHO_hasUnoccupiedOrbitalsIncluded xsd:int)
 
 # Data Property: obo:COCHO_hasValue (has value)
@@ -1979,7 +1921,12 @@ SubDataPropertyOf(obo:COCHO_hasVisibility obo:COCHO_hasPublicationData)
 DataPropertyDomain(obo:COCHO_hasVisibility obo:COCHO_ComputationalChemistryPublication)
 DataPropertyRange(obo:COCHO_hasVisibility xsd:string)
 
+# Data Property: obo:COCHO_hasVibrationCount (has vibration count)
 
+AnnotationAssertion(rdfs:comment obo:COCHO_hasVibrationCount "A property that describes the number of vibrational frequencies."@en)
+AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_hasVibrationCount <http://chemicalsemantics.com/>)
+AnnotationAssertion(rdfs:label obo:COCHO_hasVibrationCount "has vibration count"@en)
+DataPropertyRange(obo:COCHO_hasVibrationCount xsd:positiveInteger)
 
 ############################
 #   Classes
