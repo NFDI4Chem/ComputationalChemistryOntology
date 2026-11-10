@@ -1875,6 +1875,7 @@ SubDataPropertyOf(obo:COCHO_hasTextValue obo:COCHO_extraGCDataProperty)
 AnnotationAssertion(rdfs:comment obo:COCHO_hasTransitionCount "A property that describes the number of the electronic transitions in spectral calculations."@en)
 AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_hasTransitionCount <http://chemicalsemantics.com/>)
 AnnotationAssertion(rdfs:label obo:COCHO_hasTransitionCount "has transition count"@en)
+FunctionalDataProperty(obo:COCHO_hasTransitionCount)
 DataPropertyDomain(obo:COCHO_hasTransitionCount obo:COCHO_ElectronicSpectra)
 DataPropertyRange(obo:COCHO_hasTransitionCount xsd:int)
 
@@ -1926,6 +1927,7 @@ DataPropertyRange(obo:COCHO_hasVisibility xsd:string)
 AnnotationAssertion(rdfs:comment obo:COCHO_hasVibrationCount "A property that describes the number of vibrational frequencies."@en)
 AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_hasVibrationCount <http://chemicalsemantics.com/>)
 AnnotationAssertion(rdfs:label obo:COCHO_hasVibrationCount "has vibration count"@en)
+FunctionalDataProperty(obo:COCHO_hasVibrationCount)
 DataPropertyRange(obo:COCHO_hasVibrationCount xsd:positiveInteger)
 
 ############################
