@@ -433,11 +433,8 @@ Declaration(ObjectProperty(obo:COCHO_yAxis))
 Declaration(ObjectProperty(obo:COCHO_yAxisUnit))
 Declaration(DataProperty(obo:COCHO_extraGCDataProperty))
 Declaration(DataProperty(obo:COCHO_hasAtomCount))
-Declaration(DataProperty(obo:COCHO_hasAtomProperty))
-Declaration(DataProperty(obo:COCHO_hasBasisSet))
 Declaration(DataProperty(obo:COCHO_hasBondCount))
 Declaration(DataProperty(obo:COCHO_hasBondOrder))
-Declaration(DataProperty(obo:COCHO_hasBondType))
 Declaration(DataProperty(obo:COCHO_hasCategory))
 Declaration(DataProperty(obo:COCHO_hasChainNumber))
 Declaration(DataProperty(obo:COCHO_hasElementSymbol))
@@ -446,7 +443,6 @@ Declaration(DataProperty(obo:COCHO_hasExcitedStateMethod))
 Declaration(DataProperty(obo:COCHO_hasFile))
 Declaration(DataProperty(obo:COCHO_hasFirstName))
 Declaration(DataProperty(obo:COCHO_hasFloatValue))
-Declaration(DataProperty(obo:COCHO_hasForceField))
 Declaration(DataProperty(obo:COCHO_hasInChIKey))
 Declaration(DataProperty(obo:COCHO_hasInChIString))
 Declaration(DataProperty(obo:COCHO_hasIndex))
@@ -459,7 +455,6 @@ Declaration(DataProperty(obo:COCHO_hasLastName))
 Declaration(DataProperty(obo:COCHO_hasMass))
 Declaration(DataProperty(obo:COCHO_hasMethod))
 Declaration(DataProperty(obo:COCHO_hasMethodFeature))
-Declaration(DataProperty(obo:COCHO_hasMethodology))
 Declaration(DataProperty(obo:COCHO_hasMolecularData))
 Declaration(DataProperty(obo:COCHO_hasMolecularFeature))
 Declaration(DataProperty(obo:COCHO_hasMolecularMechanics))
@@ -481,7 +476,6 @@ Declaration(DataProperty(obo:COCHO_hasPublicationData))
 Declaration(DataProperty(obo:COCHO_hasQuantumMechanics))
 Declaration(DataProperty(obo:COCHO_hasSecondaryStructure))
 Declaration(DataProperty(obo:COCHO_hasSource))
-Declaration(DataProperty(obo:COCHO_hasSpinType))
 Declaration(DataProperty(obo:COCHO_hasStatus))
 Declaration(DataProperty(obo:COCHO_hasSystemMultiplicity))
 Declaration(DataProperty(obo:COCHO_hasTag))
@@ -653,12 +647,11 @@ SubObjectPropertyOf(obo:COCHO_hasAtomCoordinateZ obo:COCHO_hasCoordinates)
 ObjectPropertyDomain(obo:COCHO_hasAtomCoordinateZ obo:COCHO_Atom)
 ObjectPropertyRange(obo:COCHO_hasAtomCoordinateZ obo:COCHO_FloatValue)
 
-# Object Property: obo:COCHO_hasAtomProperty (Generic property of atoms)
+# Object Property: obo:COCHO_hasAtomProperty (has atom property)
 
 AnnotationAssertion(rdfs:comment obo:COCHO_hasAtomProperty "A property that allows to declare a general property for an atom."@en)
 AnnotationAssertion(rdfs:comment obo:COCHO_hasAtomProperty "A property that allows to describe an atom, like NMR Shielding"@en)
-AnnotationAssertion(rdfs:label obo:COCHO_hasAtomProperty "Atom Property"@en)
-AnnotationAssertion(rdfs:label obo:COCHO_hasAtomProperty "Generic property of atoms"@en)
+AnnotationAssertion(rdfs:label obo:COCHO_hasAtomProperty "has atom property"@en)
 SubObjectPropertyOf(obo:COCHO_hasAtomProperty obo:COCHO_extraGCObjectProperty)
 ObjectPropertyDomain(obo:COCHO_hasAtomProperty obo:COCHO_Atom)
 ObjectPropertyRange(obo:COCHO_hasAtomProperty owl:ObjectProperty)
@@ -694,8 +687,7 @@ AnnotationAssertion(rdfs:label obo:COCHO_hasBasisSet "has basis set"@en)
 SubObjectPropertyOf(obo:COCHO_hasBasisSet obo:COCHO_hasFeature)
 SubObjectPropertyOf(obo:COCHO_hasBasisSet obo:COCHO_hasMolecularFeature)
 FunctionalObjectProperty(obo:COCHO_hasBasisSet)
-ObjectPropertyDomain(obo:COCHO_hasBasisSet obo:COCHO_Atom)
-ObjectPropertyDomain(obo:COCHO_hasBasisSet obo:COCHO_MolecularMethodology)
+ObjectPropertyDomain(obo:COCHO_hasBasisSet ObjectUnionOf(obo:COCHO_Atom obo:COCHO_MolecularMethodology))
 ObjectPropertyRange(obo:COCHO_hasBasisSet obo:COCHO_BasisSet)
 
 # Object Property: obo:COCHO_hasBindingEnergy (has binding energy)
@@ -725,11 +717,11 @@ SubObjectPropertyOf(obo:COCHO_hasBondLength obo:COCHO_hasMolecularProperty)
 ObjectPropertyDomain(obo:COCHO_hasBondLength obo:COCHO_Bond)
 ObjectPropertyRange(obo:COCHO_hasBondLength obo:COCHO_FloatValue)
 
-# Object Property: obo:COCHO_hasBondType (Bond Type)
+# Object Property: obo:COCHO_hasBondType (has bond type)
 
 AnnotationAssertion(rdfs:comment obo:COCHO_hasBondType "A property that describes Bond Type"@en)
 AnnotationAssertion(rdfs:comment obo:COCHO_hasBondType "A property that describes bond type@en ")
-AnnotationAssertion(rdfs:label obo:COCHO_hasBondType "Bond Type"@en)
+AnnotationAssertion(rdfs:label obo:COCHO_hasBondType "has bond type"@en)
 SubObjectPropertyOf(obo:COCHO_hasBondType obo:COCHO_extraGCObjectProperty)
 ObjectPropertyDomain(obo:COCHO_hasBondType obo:COCHO_Bond)
 ObjectPropertyRange(obo:COCHO_hasBondType obo:COCHO_BondTypes)
@@ -940,8 +932,7 @@ AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_hasForceField <http://chemicalsem
 AnnotationAssertion(rdfs:label obo:COCHO_hasForceField "has force field"@en)
 SubObjectPropertyOf(obo:COCHO_hasForceField obo:COCHO_hasFeature)
 SubObjectPropertyOf(obo:COCHO_hasForceField obo:COCHO_hasMolecularFeature)
-ObjectPropertyDomain(obo:COCHO_hasForceField obo:COCHO_MolecularMechanics)
-ObjectPropertyDomain(obo:COCHO_hasForceField obo:COCHO_MolecularMethodology)
+ObjectPropertyDomain(obo:COCHO_hasForceField ObjectUnionOf(obo:COCHO_MolecularMechanics obo:COCHO_MolecularMethodology))
 ObjectPropertyRange(obo:COCHO_hasForceField obo:COCHO_ForceField)
 
 # Object Property: obo:COCHO_hasFormalCharge (has formal charge)
@@ -1216,8 +1207,7 @@ AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_hasParameterSet <http://chemicals
 AnnotationAssertion(rdfs:label obo:COCHO_hasParameterSet "has parameter set"@en)
 SubObjectPropertyOf(obo:COCHO_hasParameterSet obo:COCHO_hasFeature)
 SubObjectPropertyOf(obo:COCHO_hasParameterSet obo:COCHO_hasMolecularFeature)
-ObjectPropertyDomain(obo:COCHO_hasParameterSet obo:COCHO_MolecularMechanics)
-ObjectPropertyDomain(obo:COCHO_hasParameterSet obo:COCHO_MolecularMethodology)
+ObjectPropertyDomain(obo:COCHO_hasParameterSet ObjectUnionOf(obo:COCHO_MolecularMechanics obo:COCHO_MolecularMethodology))
 ObjectPropertyRange(obo:COCHO_hasParameterSet obo:COCHO_ParameterSet)
 
 # Object Property: obo:COCHO_hasPropertyValue (Property Value)
@@ -1494,14 +1484,6 @@ SubDataPropertyOf(obo:COCHO_hasAtomCount obo:COCHO_hasMolecularData)
 DataPropertyDomain(obo:COCHO_hasAtomCount ObjectUnionOf(obo:COCHO_MolecularSystem obo:COCHO_Molecule obo:COCHO_Residue))
 DataPropertyRange(obo:COCHO_hasAtomCount xsd:nonNegativeInteger)
 
-# Data Property: obo:COCHO_hasAtomProperty (Generic property of atoms)
-
-SubDataPropertyOf(obo:COCHO_hasAtomProperty obo:COCHO_hasMolecularData)
-
-# Data Property: obo:COCHO_hasBasisSet (has basis set)
-
-DataPropertyRange(obo:COCHO_hasBasisSet rdfs:Literal)
-
 # Data Property: obo:COCHO_hasBondCount (has bond count)
 
 AnnotationAssertion(rdfs:comment obo:COCHO_hasBondCount "A property that determinates the count of bonds into Molecule, Residue or Atom."@en)
@@ -1577,10 +1559,6 @@ AnnotationAssertion(rdfs:label obo:COCHO_hasFloatValue "has float value"@en)
 SubDataPropertyOf(obo:COCHO_hasFloatValue obo:COCHO_hasValue)
 DataPropertyDomain(obo:COCHO_hasFloatValue obo:COCHO_FloatValue)
 DataPropertyRange(obo:COCHO_hasFloatValue xsd:float)
-
-# Data Property: obo:COCHO_hasForceField (has force field)
-
-DataPropertyRange(obo:COCHO_hasForceField xsd:string)
 
 # Data Property: obo:COCHO_hasInChIKey (has InChI key)
 
@@ -1680,11 +1658,6 @@ AnnotationAssertion(rdfs:comment obo:COCHO_hasMethodFeature "The upper property 
 AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_hasMethodFeature <http://chemicalsemantics.com/>)
 AnnotationAssertion(rdfs:label obo:COCHO_hasMethodFeature "Generic Datatype Property for Molecular Features related to methods of computations"@en)
 
-# Data Property: obo:COCHO_hasMethodology (has methodology)
-
-SubDataPropertyOf(obo:COCHO_hasMethodology obo:COCHO_hasMethodFeature)
-DataPropertyRange(obo:COCHO_hasMethodology xsd:string)
-
 # Data Property: obo:COCHO_hasMolecularData (Generic Datatype Property for Molecular Data)
 
 AnnotationAssertion(rdfs:comment obo:COCHO_hasMolecularData "The upper property for various properties related to Molecular Data")
@@ -1779,10 +1752,6 @@ SubDataPropertyOf(obo:COCHO_hasOutput obo:COCHO_hasPublicationData)
 DataPropertyDomain(obo:COCHO_hasOutput obo:COCHO_SourcePackage)
 DataPropertyRange(obo:COCHO_hasOutput xsd:string)
 
-# Data Property: obo:COCHO_hasParameterSet (has parameter set)
-
-DataPropertyRange(obo:COCHO_hasParameterSet xsd:string)
-
 # Data Property: obo:COCHO_hasPeakCount (Peak Count)
 
 AnnotationAssertion(rdfs:comment obo:COCHO_hasPeakCount "A property that determinates the count of peaks in a spectrum."@en)
@@ -1827,10 +1796,6 @@ DataPropertyRange(obo:COCHO_hasSecondaryStructure rdfs:Literal)
 
 SubDataPropertyOf(obo:COCHO_hasSource obo:COCHO_extraGCDataProperty)
 DataPropertyRange(obo:COCHO_hasSource rdfs:Literal)
-
-# Data Property: obo:COCHO_hasSpinType (has spin type)
-
-DataPropertyRange(obo:COCHO_hasSpinType rdfs:Literal)
 
 # Data Property: obo:COCHO_hasStatus (has status)
 
