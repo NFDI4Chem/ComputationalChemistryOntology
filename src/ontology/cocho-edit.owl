@@ -358,7 +358,6 @@ Declaration(ObjectProperty(obo:COCHO_hasElectronicEnergy))
 Declaration(ObjectProperty(obo:COCHO_hasElectronicSpectraResult))
 Declaration(ObjectProperty(obo:COCHO_hasElectronicTransitions))
 Declaration(ObjectProperty(obo:COCHO_hasExchangeFunctional))
-Declaration(ObjectProperty(obo:COCHO_hasExcitedStateMethod))
 Declaration(ObjectProperty(obo:COCHO_hasFeature))
 Declaration(ObjectProperty(obo:COCHO_hasFile))
 Declaration(ObjectProperty(obo:COCHO_hasFloatVector))
@@ -377,7 +376,6 @@ Declaration(ObjectProperty(obo:COCHO_hasMathMLEquation))
 Declaration(ObjectProperty(obo:COCHO_hasMethodology))
 Declaration(ObjectProperty(obo:COCHO_hasMolecularCollection))
 Declaration(ObjectProperty(obo:COCHO_hasMolecularComputation))
-Declaration(ObjectProperty(obo:COCHO_hasMolecularMechanics))
 Declaration(ObjectProperty(obo:COCHO_hasMolecularProperty))
 Declaration(ObjectProperty(obo:COCHO_hasMolecularSystem))
 Declaration(ObjectProperty(obo:COCHO_hasMolecule))
@@ -390,7 +388,6 @@ Declaration(ObjectProperty(obo:COCHO_hasNormalMode))
 Declaration(ObjectProperty(obo:COCHO_hasNuclearRepulsionEnergy))
 Declaration(ObjectProperty(obo:COCHO_hasNumberBasisFunc))
 Declaration(ObjectProperty(obo:COCHO_hasOccupancy))
-Declaration(ObjectProperty(obo:COCHO_hasOpenShellTreatment))
 Declaration(ObjectProperty(obo:COCHO_hasOrbital))
 Declaration(ObjectProperty(obo:COCHO_hasOrbitalEnergy))
 Declaration(ObjectProperty(obo:COCHO_hasOscillatorStrength))
@@ -400,7 +397,6 @@ Declaration(ObjectProperty(obo:COCHO_hasParameterSet))
 Declaration(ObjectProperty(obo:COCHO_hasPropertyValue))
 Declaration(ObjectProperty(obo:COCHO_hasPublisher))
 Declaration(ObjectProperty(obo:COCHO_hasQuantity))
-Declaration(ObjectProperty(obo:COCHO_hasQuantumMechanics))
 Declaration(ObjectProperty(obo:COCHO_hasRMSGradient))
 Declaration(ObjectProperty(obo:COCHO_hasResidue))
 Declaration(ObjectProperty(obo:COCHO_hasResidueProperty))
@@ -431,6 +427,7 @@ Declaration(ObjectProperty(obo:COCHO_xAxis))
 Declaration(ObjectProperty(obo:COCHO_xAxisUnit))
 Declaration(ObjectProperty(obo:COCHO_yAxis))
 Declaration(ObjectProperty(obo:COCHO_yAxisUnit))
+Declaration(ObjectProperty(obo:COCHO_hasMolecularFeature))
 Declaration(DataProperty(obo:COCHO_extraGCDataProperty))
 Declaration(DataProperty(obo:COCHO_hasAtomCount))
 Declaration(DataProperty(obo:COCHO_hasBondCount))
@@ -440,7 +437,6 @@ Declaration(DataProperty(obo:COCHO_hasChainNumber))
 Declaration(DataProperty(obo:COCHO_hasElementSymbol))
 Declaration(DataProperty(obo:COCHO_hasEmail))
 Declaration(DataProperty(obo:COCHO_hasExcitedStateMethod))
-Declaration(DataProperty(obo:COCHO_hasFile))
 Declaration(DataProperty(obo:COCHO_hasFirstName))
 Declaration(DataProperty(obo:COCHO_hasFloatValue))
 Declaration(DataProperty(obo:COCHO_hasInChIKey))
@@ -456,7 +452,6 @@ Declaration(DataProperty(obo:COCHO_hasMass))
 Declaration(DataProperty(obo:COCHO_hasMethod))
 Declaration(DataProperty(obo:COCHO_hasMethodFeature))
 Declaration(DataProperty(obo:COCHO_hasMolecularData))
-Declaration(DataProperty(obo:COCHO_hasMolecularFeature))
 Declaration(DataProperty(obo:COCHO_hasMolecularMechanics))
 Declaration(DataProperty(obo:COCHO_hasMultipleDeterminant))
 Declaration(DataProperty(obo:COCHO_hasName))
@@ -475,7 +470,6 @@ Declaration(DataProperty(obo:COCHO_hasPropertyCount))
 Declaration(DataProperty(obo:COCHO_hasPublicationData))
 Declaration(DataProperty(obo:COCHO_hasQuantumMechanics))
 Declaration(DataProperty(obo:COCHO_hasSecondaryStructure))
-Declaration(DataProperty(obo:COCHO_hasSource))
 Declaration(DataProperty(obo:COCHO_hasStatus))
 Declaration(DataProperty(obo:COCHO_hasSystemMultiplicity))
 Declaration(DataProperty(obo:COCHO_hasTag))
@@ -511,8 +505,6 @@ Declaration(NamedIndividual(obo:COCHO_kiloCaloriesPerAngstrom))
 Declaration(NamedIndividual(obo:COCHO_kiloJoules))
 Declaration(NamedIndividual(obo:COCHO_kmPerMol))
 Declaration(NamedIndividual(obo:COCHO_Mm+))
-Declaration(AnnotationProperty(obo:COCHO_hasMolecularMechanics))
-Declaration(AnnotationProperty(obo:COCHO_hasQuantumMechanics))
 Declaration(AnnotationProperty(obo:COCHO_isAbstract))
 Declaration(AnnotationProperty(obo:COCHO_termStatus))
 Declaration(AnnotationProperty(obo:COCHO_termStatusNote))
@@ -536,16 +528,6 @@ AnnotationAssertion(rdfs:label dcterms:publisher "publisher")
 # Annotation Property: dcterms:title (title)
 
 AnnotationAssertion(rdfs:label dcterms:title "title")
-
-# Annotation Property: obo:COCHO_hasMolecularMechanics (There is Molecular Mechanical Calculation)
-
-AnnotationAssertion(rdfs:comment obo:COCHO_hasMolecularMechanics "A property that says (true/false) if there is MM calculation"@en)
-AnnotationAssertion(rdfs:label obo:COCHO_hasMolecularMechanics "There is Molecular Mechanical Calculation"@en)
-
-# Annotation Property: obo:COCHO_hasQuantumMechanics (There is Quantum Mechanical Calculation)
-
-AnnotationAssertion(rdfs:comment obo:COCHO_hasQuantumMechanics "A property that says (true/false) if there is QM calculation"@en)
-AnnotationAssertion(rdfs:label obo:COCHO_hasQuantumMechanics "There is Quantum Mechanical Calculation"@en)
 
 # Annotation Property: obo:COCHO_isAbstract (is abstract)
 
@@ -892,15 +874,6 @@ SubObjectPropertyOf(obo:COCHO_hasExchangeFunctional obo:COCHO_hasFeature)
 ObjectPropertyDomain(obo:COCHO_hasExchangeFunctional obo:COCHO_MolecularMethodology)
 ObjectPropertyRange(obo:COCHO_hasExchangeFunctional obo:COCHO_ExchangeFunctional)
 
-# Object Property: obo:COCHO_hasExcitedStateMethod (has excited state method)
-
-AnnotationAssertion(rdfs:comment obo:COCHO_hasExcitedStateMethod "A property that defines the method for the calculation of the excited states of molecules."@en)
-AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_hasExcitedStateMethod <http://chemicalsemantics.com/>)
-AnnotationAssertion(rdfs:label obo:COCHO_hasExcitedStateMethod "has excited state method"@en)
-SubObjectPropertyOf(obo:COCHO_hasExcitedStateMethod obo:COCHO_hasMolecularFeature)
-FunctionalObjectProperty(obo:COCHO_hasExcitedStateMethod)
-ObjectPropertyDomain(obo:COCHO_hasExcitedStateMethod obo:COCHO_ElectronicSpectra)
-
 # Object Property: obo:COCHO_hasFeature (obo:COCHO_hasFeature)
 
 AnnotationAssertion(rdfs:comment obo:COCHO_hasFeature "A property that describes a specific feature of given methodology."@en)
@@ -1045,16 +1018,11 @@ SubObjectPropertyOf(obo:COCHO_hasMolecularComputation obo:COCHO_extraGCObjectPro
 ObjectPropertyDomain(obo:COCHO_hasMolecularComputation obo:COCHO_MolecularSystem)
 ObjectPropertyRange(obo:COCHO_hasMolecularComputation obo:COCHO_MolecularComputation)
 
-# Object Property: obo:COCHO_hasMolecularFeature (Generic Datatype Property for Molecular Features related to computations)
+# Object Property: obo:COCHO_hasMolecularFeature (has molecular feature)
 
 AnnotationAssertion(rdfs:comment obo:COCHO_hasMolecularFeature "The upper property for various properties related to Molecular Data")
 AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_hasMolecularFeature <http://chemicalsemantics.com/>)
-AnnotationAssertion(rdfs:label obo:COCHO_hasMolecularFeature "Generic Datatype Property for Molecular Features related to computations"@en)
-
-# Object Property: obo:COCHO_hasMolecularMechanics (There is Molecular Mechanical Calculation)
-
-SubObjectPropertyOf(obo:COCHO_hasMolecularMechanics obo:COCHO_hasCalculationOn)
-ObjectPropertyDomain(obo:COCHO_hasMolecularMechanics obo:COCHO_Calculation)
+AnnotationAssertion(rdfs:label obo:COCHO_hasMolecularFeature "has molecular feature"@en)
 
 # Object Property: obo:COCHO_hasMolecularProperty (Generic Molecular Property)
 
@@ -1153,13 +1121,6 @@ SubObjectPropertyOf(obo:COCHO_hasOccupancy obo:COCHO_hasResult)
 ObjectPropertyDomain(obo:COCHO_hasOccupancy obo:COCHO_Orbital)
 ObjectPropertyRange(obo:COCHO_hasOccupancy obo:COCHO_FloatValue)
 
-# Object Property: obo:COCHO_hasOpenShellTreatment (has open shell treatment)
-
-AnnotationAssertion(rdfs:comment obo:COCHO_hasOpenShellTreatment "A property that describes the treatment of open shell systems."@en)
-AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_hasOpenShellTreatment <http://chemicalsemantics.com/>)
-AnnotationAssertion(rdfs:label obo:COCHO_hasOpenShellTreatment "has open shell treatment"@en)
-SubObjectPropertyOf(obo:COCHO_hasOpenShellTreatment obo:COCHO_hasMolecularFeature)
-
 # Object Property: obo:COCHO_hasOrbital (has orbital)
 
 AnnotationAssertion(rdfs:comment obo:COCHO_hasOrbital "A property that describes the orbital."@en)
@@ -1229,11 +1190,6 @@ ObjectPropertyRange(obo:COCHO_hasPublisher dcterms:publisher)
 AnnotationAssertion(rdfs:comment obo:COCHO_hasQuantity "A property that defines quantity"@en)
 AnnotationAssertion(rdfs:label obo:COCHO_hasQuantity "Quantity"@en)
 SubObjectPropertyOf(obo:COCHO_hasQuantity obo:COCHO_extraGCObjectProperty)
-
-# Object Property: obo:COCHO_hasQuantumMechanics (There is Quantum Mechanical Calculation)
-
-SubObjectPropertyOf(obo:COCHO_hasQuantumMechanics obo:COCHO_hasCalculationOn)
-ObjectPropertyDomain(obo:COCHO_hasQuantumMechanics obo:COCHO_Calculation)
 
 # Object Property: obo:COCHO_hasRMSGradient (has RMS Gradient)
 
@@ -1537,11 +1493,13 @@ DataPropertyRange(obo:COCHO_hasEmail xsd:string)
 
 # Data Property: obo:COCHO_hasExcitedStateMethod (has excited state method)
 
+AnnotationAssertion(rdfs:comment obo:COCHO_hasExcitedStateMethod "A property that defines the method for the calculation of the excited states of molecules."@en)
+AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_hasExcitedStateMethod <http://chemicalsemantics.com/>)
+AnnotationAssertion(rdfs:label obo:COCHO_hasExcitedStateMethod "has excited state method"@en)
+FunctionalDataProperty(obo:COCHO_hasExcitedStateMethod)
+DataPropertyDomain(obo:COCHO_hasExcitedStateMethod obo:COCHO_ElectronicSpectra)
 DataPropertyRange(obo:COCHO_hasExcitedStateMethod rdfs:Literal)
 
-# Data Property: obo:COCHO_hasFile (has file)
-
-SubDataPropertyOf(obo:COCHO_hasFile obo:COCHO_hasPublicationData)
 
 # Data Property: obo:COCHO_hasFirstName (has first name)
 
@@ -1664,9 +1622,13 @@ AnnotationAssertion(rdfs:comment obo:COCHO_hasMolecularData "The upper property 
 AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_hasMolecularData <http://chemicalsemantics.com/>)
 AnnotationAssertion(rdfs:label obo:COCHO_hasMolecularData "Generic Datatype Property for Molecular Data"@en)
 
-# Data Property: obo:COCHO_hasMolecularMechanics (There is Molecular Mechanical Calculation)
+# Data Property: obo:COCHO_hasMolecularMechanics (has molecular mechanics)
 
+AnnotationAssertion(rdfs:comment obo:COCHO_hasMolecularMechanics "A property that says (true/false) if there is MM calculation"@en)
+AnnotationAssertion(rdfs:label obo:COCHO_hasMolecularMechanics "has molecular mechanics"@en)
 SubDataPropertyOf(obo:COCHO_hasMolecularMechanics obo:COCHO_extraGCDataProperty)
+DataPropertyDomain(obo:COCHO_hasMolecularMechanics obo:COCHO_Calculation)
+DataPropertyRange(obo:COCHO_hasMolecularMechanics xsd:boolean)
 
 # Data Property: obo:COCHO_hasMultipleDeterminant (has Multiple Determinant)
 
@@ -1718,6 +1680,9 @@ DataPropertyRange(obo:COCHO_hasOccupiedOrbitalsIncluded xsd:int)
 
 # Data Property: obo:COCHO_hasOpenShellTreatment (has open shell treatment)
 
+AnnotationAssertion(rdfs:comment obo:COCHO_hasOpenShellTreatment "A property that describes the treatment of open shell systems."@en)
+AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_hasOpenShellTreatment <http://chemicalsemantics.com/>)
+AnnotationAssertion(rdfs:label obo:COCHO_hasOpenShellTreatment "has open shell treatment"@en)
 DataPropertyRange(obo:COCHO_hasOpenShellTreatment rdfs:Literal)
 
 # Data Property: obo:COCHO_hasOrbitalCount (has orbital count)
@@ -1779,9 +1744,13 @@ AnnotationAssertion(rdfs:comment obo:COCHO_hasPublicationData "The upper propert
 AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_hasPublicationData <http://chemicalsemantics.com/>)
 AnnotationAssertion(rdfs:label obo:COCHO_hasPublicationData "Generic Datatype Property for Publication data"@en)
 
-# Data Property: obo:COCHO_hasQuantumMechanics (There is Quantum Mechanical Calculation)
+# Data Property: obo:COCHO_hasQuantumMechanics (has quantum mechanics)
 
+AnnotationAssertion(rdfs:comment obo:COCHO_hasQuantumMechanics "A property that says (true/false) if there is QM calculation"@en)
+AnnotationAssertion(rdfs:label obo:COCHO_hasQuantumMechanics "has quantum mechanics"@en)
 SubDataPropertyOf(obo:COCHO_hasQuantumMechanics obo:COCHO_extraGCDataProperty)
+DataPropertyDomain(obo:COCHO_hasQuantumMechanics obo:COCHO_Calculation)
+DataPropertyRange(obo:COCHO_hasQuantumMechanics xsd:boolean)
 
 # Data Property: obo:COCHO_hasSecondaryStructure (has secondary structure)
 
@@ -1791,11 +1760,6 @@ AnnotationAssertion(rdfs:label obo:COCHO_hasSecondaryStructure "has secondary st
 SubDataPropertyOf(obo:COCHO_hasSecondaryStructure obo:COCHO_hasMolecularData)
 DataPropertyDomain(obo:COCHO_hasSecondaryStructure obo:COCHO_Residue)
 DataPropertyRange(obo:COCHO_hasSecondaryStructure rdfs:Literal)
-
-# Data Property: obo:COCHO_hasSource (Source of calculations (software))
-
-SubDataPropertyOf(obo:COCHO_hasSource obo:COCHO_extraGCDataProperty)
-DataPropertyRange(obo:COCHO_hasSource rdfs:Literal)
 
 # Data Property: obo:COCHO_hasStatus (has status)
 
