@@ -394,7 +394,6 @@ Declaration(ObjectProperty(obo:COCHO_hasOutputFile))
 Declaration(ObjectProperty(obo:COCHO_hasParameter))
 Declaration(ObjectProperty(obo:COCHO_hasParameterSet))
 Declaration(ObjectProperty(obo:COCHO_hasPropertyValue))
-Declaration(ObjectProperty(obo:COCHO_hasPublisher))
 Declaration(ObjectProperty(obo:COCHO_hasQuantity))
 Declaration(ObjectProperty(obo:COCHO_hasRMSGradient))
 Declaration(ObjectProperty(obo:COCHO_hasResidue))
@@ -1169,14 +1168,6 @@ ObjectPropertyRange(obo:COCHO_hasParameterSet obo:COCHO_ParameterSet)
 AnnotationAssertion(rdfs:comment obo:COCHO_hasPropertyValue "A property Value"@en)
 AnnotationAssertion(rdfs:label obo:COCHO_hasPropertyValue "Property Value"@en)
 SubObjectPropertyOf(obo:COCHO_hasPropertyValue obo:COCHO_extraGCObjectProperty)
-
-# Object Property: obo:COCHO_hasPublisher (Publisher of the publication)
-
-AnnotationAssertion(rdfs:comment obo:COCHO_hasPublisher "A property that relates publication to publisher"@en)
-AnnotationAssertion(rdfs:label obo:COCHO_hasPublisher "Publisher of the publication"@en)
-SubObjectPropertyOf(obo:COCHO_hasPublisher obo:COCHO_extraGCObjectProperty)
-ObjectPropertyDomain(obo:COCHO_hasPublisher obo:COCHO_ComputationalChemistryPublication)
-ObjectPropertyRange(obo:COCHO_hasPublisher dcterms:publisher)
 
 # Object Property: obo:COCHO_hasQuantity (Quantity)
 
