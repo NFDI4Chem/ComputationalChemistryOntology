@@ -636,7 +636,6 @@ AnnotationAssertion(rdfs:comment obo:COCHO_hasAtomProperty "A property that allo
 AnnotationAssertion(rdfs:label obo:COCHO_hasAtomProperty "has atom property"@en)
 SubObjectPropertyOf(obo:COCHO_hasAtomProperty obo:COCHO_extraGCObjectProperty)
 ObjectPropertyDomain(obo:COCHO_hasAtomProperty obo:COCHO_Atom)
-ObjectPropertyRange(obo:COCHO_hasAtomProperty owl:ObjectProperty)
 
 # Object Property: obo:COCHO_hasAuthor (Author)
 
@@ -651,8 +650,6 @@ ObjectPropertyRange(obo:COCHO_hasAuthor obo:COCHO_Author)
 AnnotationAssertion(rdfs:comment obo:COCHO_hasAuxiliaryProperty "The upper property for various properties related to publications")
 AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_hasAuxiliaryProperty <http://chemicalsemantics.com/>)
 AnnotationAssertion(rdfs:label obo:COCHO_hasAuxiliaryProperty "Generic Auxiliary Property"@en)
-ObjectPropertyDomain(obo:COCHO_hasAuxiliaryProperty rdfs:Class)
-ObjectPropertyRange(obo:COCHO_hasAuxiliaryProperty rdfs:Class)
 
 # Object Property: obo:COCHO_hasBasisCount (The Basis Count)
 
@@ -1029,8 +1026,6 @@ AnnotationAssertion(rdfs:label obo:COCHO_hasMolecularFeature "has molecular feat
 AnnotationAssertion(rdfs:comment obo:COCHO_hasMolecularProperty "The upper property for various properties related to molecular systems")
 AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_hasMolecularProperty <http://chemicalsemantics.com/>)
 AnnotationAssertion(rdfs:label obo:COCHO_hasMolecularProperty "Generic Molecular Property"@en)
-ObjectPropertyDomain(obo:COCHO_hasMolecularProperty rdfs:Class)
-ObjectPropertyRange(obo:COCHO_hasMolecularProperty rdfs:Class)
 
 # Object Property: obo:COCHO_hasMolecularSystem (Molecular System)
 
