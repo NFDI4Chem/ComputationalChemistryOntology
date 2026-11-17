@@ -1,17 +1,17 @@
 Prefix(:=<http://purl.obolibrary.org/obo/cocho.owl#>)
+Prefix(pt:=<http://www.daml.org/2003/01/periodictable/PeriodicTable#>)
 Prefix(obo:=<http://purl.obolibrary.org/obo/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
 Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
-Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Prefix(qudt:=<http://data.nasa.gov/qudt/owl/qudt#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Prefix(unit:=<http://data.nasa.gov/qudt/owl/unit#>)
-Prefix(pt:=<http://www.daml.org/2003/01/periodictable/PeriodicTable#>)
 Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 
-Ontology(<http://purl.obolibrary.org/obo/cocho.owl>)
+Ontology(<http://purl.obolibrary.org/obo/cocho.owl>
 Import(<http://purl.obolibrary.org/obo/cocho/imports/cheminf_import.owl>)
 Import(<http://purl.obolibrary.org/obo/cocho/imports/cob_import.owl>)
 Import(<http://purl.obolibrary.org/obo/cocho/imports/iao_import.owl>)
@@ -22,17 +22,25 @@ Annotation(dcterms:description "COCHO, the computational chemistry ontology, des
 Annotation(dcterms:license <https://creativecommons.org/licenses/by/4.0/>)
 Annotation(dcterms:title "Computational Chemistry Ontology")
 
-Declaration(Class(<http://purl.obolibrary.org/obo/COCHO_0000000>))
-Declaration(AnnotationProperty(dcterms:description))
-Declaration(AnnotationProperty(dcterms:license))
-Declaration(AnnotationProperty(dcterms:title))
-Declaration(AnnotationProperty(dcterms:publisher))
 Declaration(Class(qudt:ChemistryUnit))
 Declaration(Class(qudt:DerivedUnit))
 Declaration(Class(qudt:ElectricDipoleMomentUnit))
 Declaration(Class(qudt:EnergyAndWorkUnit))
 Declaration(Class(qudt:FrequencyUnit))
 Declaration(Class(qudt:LengthUnit))
+Declaration(Class(obo:COCHO_0000000))
+Declaration(Class(obo:COCHO_3-21G))
+Declaration(Class(obo:COCHO_3-21GS))
+Declaration(Class(obo:COCHO_3-21pG))
+Declaration(Class(obo:COCHO_3-21pGS))
+Declaration(Class(obo:COCHO_4-31G))
+Declaration(Class(obo:COCHO_6-311G))
+Declaration(Class(obo:COCHO_6-311GS))
+Declaration(Class(obo:COCHO_6-311pGS))
+Declaration(Class(obo:COCHO_6-31G))
+Declaration(Class(obo:COCHO_6-31GS))
+Declaration(Class(obo:COCHO_6-31GSS))
+Declaration(Class(obo:COCHO_6-31pGS))
 Declaration(Class(obo:COCHO_AbInitioScf))
 Declaration(Class(obo:COCHO_AbinitioScf))
 Declaration(Class(obo:COCHO_AhlrichsBasisSet))
@@ -308,18 +316,7 @@ Declaration(Class(obo:COCHO_cc-pVQZ))
 Declaration(Class(obo:COCHO_cc-pVTZ))
 Declaration(Class(obo:COCHO_d-aug-cc-pVDZ))
 Declaration(Class(obo:COCHO_jun-cc-pVDZ))
-Declaration(Class(obo:COCHO_3-21G))
-Declaration(Class(obo:COCHO_3-21GS))
-Declaration(Class(obo:COCHO_3-21pG))
-Declaration(Class(obo:COCHO_3-21pGS))
-Declaration(Class(obo:COCHO_4-31G))
-Declaration(Class(obo:COCHO_6-31G))
-Declaration(Class(obo:COCHO_6-31GS))
-Declaration(Class(obo:COCHO_6-31GSS))
-Declaration(Class(obo:COCHO_6-31pGS))
-Declaration(Class(obo:COCHO_6-311G))
-Declaration(Class(obo:COCHO_6-311GS))
-Declaration(Class(obo:COCHO_6-311pGS))
+Declaration(Class(pt:Element))
 Declaration(ObjectProperty(obo:COCHO_IsAtomProperty))
 Declaration(ObjectProperty(obo:COCHO_IsSystemProperty))
 Declaration(ObjectProperty(obo:COCHO_binds))
@@ -375,6 +372,7 @@ Declaration(ObjectProperty(obo:COCHO_hasMathMLEquation))
 Declaration(ObjectProperty(obo:COCHO_hasMethodology))
 Declaration(ObjectProperty(obo:COCHO_hasMolecularCollection))
 Declaration(ObjectProperty(obo:COCHO_hasMolecularComputation))
+Declaration(ObjectProperty(obo:COCHO_hasMolecularFeature))
 Declaration(ObjectProperty(obo:COCHO_hasMolecularProperty))
 Declaration(ObjectProperty(obo:COCHO_hasMolecularSystem))
 Declaration(ObjectProperty(obo:COCHO_hasMolecule))
@@ -425,7 +423,6 @@ Declaration(ObjectProperty(obo:COCHO_xAxis))
 Declaration(ObjectProperty(obo:COCHO_xAxisUnit))
 Declaration(ObjectProperty(obo:COCHO_yAxis))
 Declaration(ObjectProperty(obo:COCHO_yAxisUnit))
-Declaration(ObjectProperty(obo:COCHO_hasMolecularFeature))
 Declaration(DataProperty(obo:COCHO_extraGCDataProperty))
 Declaration(DataProperty(obo:COCHO_hasAtomCount))
 Declaration(DataProperty(obo:COCHO_hasBondCount))
@@ -501,30 +498,17 @@ Declaration(NamedIndividual(obo:COCHO_kiloCalories))
 Declaration(NamedIndividual(obo:COCHO_kiloCaloriesPerAngstrom))
 Declaration(NamedIndividual(obo:COCHO_kiloJoules))
 Declaration(NamedIndividual(obo:COCHO_kmPerMol))
-Declaration(NamedIndividual(obo:COCHO_Mm+))
+Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/COCHO_Mm+>))
 Declaration(AnnotationProperty(obo:COCHO_isAbstract))
 Declaration(AnnotationProperty(obo:COCHO_termStatus))
 Declaration(AnnotationProperty(obo:COCHO_termStatusNote))
-
+Declaration(AnnotationProperty(dcterms:description))
+Declaration(AnnotationProperty(dcterms:license))
+Declaration(AnnotationProperty(dcterms:publisher))
+Declaration(AnnotationProperty(dcterms:title))
 ############################
 #   Annotation Properties
 ############################
-
-# Annotation Property: dcterms:description (description)
-
-AnnotationAssertion(rdfs:label dcterms:description "description")
-
-# Annotation Property: dcterms:license (license)
-
-AnnotationAssertion(rdfs:label dcterms:license "license")
-
-# Annotation Property: dcterms:publisher (publisher)
-
-AnnotationAssertion(rdfs:label dcterms:publisher "publisher")
-
-# Annotation Property: dcterms:title (title)
-
-AnnotationAssertion(rdfs:label dcterms:title "title")
 
 # Annotation Property: obo:COCHO_isAbstract (is abstract)
 
@@ -562,6 +546,22 @@ AnnotationAssertion(rdfs:comment obo:COCHO_termStatusNote "This property is a st
     Since it's only a annotation property, it doesn't impact a logical definition of an Entity. Such a property should be treated as a \"side note\". "@en)
 AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_termStatusNote <http://chemicalsemantics.com/>)
 AnnotationAssertion(rdfs:label obo:COCHO_termStatusNote "term status note"@en)
+
+# Annotation Property: dcterms:description (description)
+
+AnnotationAssertion(rdfs:label dcterms:description "description")
+
+# Annotation Property: dcterms:license (license)
+
+AnnotationAssertion(rdfs:label dcterms:license "license")
+
+# Annotation Property: dcterms:publisher (publisher)
+
+AnnotationAssertion(rdfs:label dcterms:publisher "publisher")
+
+# Annotation Property: dcterms:title (title)
+
+AnnotationAssertion(rdfs:label dcterms:title "title")
 
 
 ############################
@@ -1409,6 +1409,7 @@ AnnotationAssertion(rdfs:label obo:COCHO_yAxisUnit "Y Axis Unit"@en)
 SubObjectPropertyOf(obo:COCHO_yAxisUnit obo:COCHO_extraGCObjectProperty)
 ObjectPropertyDomain(obo:COCHO_yAxisUnit obo:COCHO_InfraRedSpectrum)
 
+
 ############################
 #   Data Properties
 ############################
@@ -1482,7 +1483,6 @@ AnnotationAssertion(rdfs:label obo:COCHO_hasExcitedStateMethod "has excited stat
 FunctionalDataProperty(obo:COCHO_hasExcitedStateMethod)
 DataPropertyDomain(obo:COCHO_hasExcitedStateMethod obo:COCHO_ElectronicSpectra)
 DataPropertyRange(obo:COCHO_hasExcitedStateMethod rdfs:Literal)
-
 
 # Data Property: obo:COCHO_hasFirstName (has first name)
 
@@ -1825,6 +1825,14 @@ SubDataPropertyOf(obo:COCHO_hasVersion obo:COCHO_hasPublicationData)
 DataPropertyDomain(obo:COCHO_hasVersion obo:COCHO_SourcePackage)
 DataPropertyRange(obo:COCHO_hasVersion xsd:string)
 
+# Data Property: obo:COCHO_hasVibrationCount (has vibration count)
+
+AnnotationAssertion(rdfs:comment obo:COCHO_hasVibrationCount "A property that describes the number of vibrational frequencies."@en)
+AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_hasVibrationCount <http://chemicalsemantics.com/>)
+AnnotationAssertion(rdfs:label obo:COCHO_hasVibrationCount "has vibration count"@en)
+FunctionalDataProperty(obo:COCHO_hasVibrationCount)
+DataPropertyRange(obo:COCHO_hasVibrationCount xsd:positiveInteger)
+
 # Data Property: obo:COCHO_hasVisibility (has visibility)
 
 AnnotationAssertion(rdfs:comment obo:COCHO_hasVisibility "A property that defines the allowed visibility of the publication."@en)
@@ -1834,22 +1842,111 @@ SubDataPropertyOf(obo:COCHO_hasVisibility obo:COCHO_hasPublicationData)
 DataPropertyDomain(obo:COCHO_hasVisibility obo:COCHO_ComputationalChemistryPublication)
 DataPropertyRange(obo:COCHO_hasVisibility xsd:string)
 
-# Data Property: obo:COCHO_hasVibrationCount (has vibration count)
 
-AnnotationAssertion(rdfs:comment obo:COCHO_hasVibrationCount "A property that describes the number of vibrational frequencies."@en)
-AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_hasVibrationCount <http://chemicalsemantics.com/>)
-AnnotationAssertion(rdfs:label obo:COCHO_hasVibrationCount "has vibration count"@en)
-FunctionalDataProperty(obo:COCHO_hasVibrationCount)
-DataPropertyRange(obo:COCHO_hasVibrationCount xsd:positiveInteger)
 
 ############################
 #   Classes
 ############################
 
-# Class: <http://purl.obolibrary.org/obo/COCHO_0000000> (root node)
+# Class: obo:COCHO_0000000 (root node)
 
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/COCHO_0000000> "root node"@en)
+AnnotationAssertion(rdfs:label obo:COCHO_0000000 "root node"@en)
 
+# Class: obo:COCHO_3-21G (3-21G Basis Set)
+
+AnnotationAssertion(rdfs:comment obo:COCHO_3-21G "A class for the Pople split valence 3-21G basis set."@en)
+AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_3-21G <http://chemicalsemantics.com/>)
+AnnotationAssertion(rdfs:label obo:COCHO_3-21G "3-21G Basis Set"@en)
+SubClassOf(obo:COCHO_3-21G obo:COCHO_SplitValencePopleBasisSet)
+
+# Class: obo:COCHO_3-21GS (3-21G* Basis Set)
+
+AnnotationAssertion(rdfs:comment obo:COCHO_3-21GS "A class for the Pople polarization split valence 3-21G* basis set."@en)
+AnnotationAssertion(rdfs:comment obo:COCHO_3-21GS "A class for the Pople split valence 3-21G* basis set."@en)
+AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_3-21GS <http://chemicalsemantics.com/>)
+AnnotationAssertion(rdfs:label obo:COCHO_3-21GS "3-21G* Basis Set"@en)
+SubClassOf(obo:COCHO_3-21GS obo:COCHO_PolarizedPopleBasisSet)
+SubClassOf(obo:COCHO_3-21GS obo:COCHO_SplitValencePopleBasisSet)
+
+# Class: obo:COCHO_3-21pG (3-21+G Basis Set)
+
+AnnotationAssertion(rdfs:comment obo:COCHO_3-21pG "A class for the Pople split valence 3-21+G basis set."@en)
+AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_3-21pG <http://chemicalsemantics.com/>)
+AnnotationAssertion(rdfs:label obo:COCHO_3-21pG "3-21+G Basis Set"@en)
+SubClassOf(obo:COCHO_3-21pG obo:COCHO_DiffusePopleBasisSet)
+SubClassOf(obo:COCHO_3-21pG obo:COCHO_SplitValencePopleBasisSet)
+
+# Class: obo:COCHO_3-21pGS (3-21+G* Basis Set)
+
+AnnotationAssertion(rdfs:comment obo:COCHO_3-21pGS "A class for the Pople split valence 3-21+G* basis set."@en)
+AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_3-21pGS <http://chemicalsemantics.com/>)
+AnnotationAssertion(rdfs:label obo:COCHO_3-21pGS "3-21+G* Basis Set"@en)
+SubClassOf(obo:COCHO_3-21pGS obo:COCHO_DiffusePopleBasisSet)
+SubClassOf(obo:COCHO_3-21pGS obo:COCHO_PolarizedPopleBasisSet)
+SubClassOf(obo:COCHO_3-21pGS obo:COCHO_SplitValencePopleBasisSet)
+
+# Class: obo:COCHO_4-31G (4-31G Basis Set)
+
+AnnotationAssertion(rdfs:comment obo:COCHO_4-31G "A class for the Pople split valence 4-31G basis set."@en)
+AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_4-31G <http://chemicalsemantics.com/>)
+AnnotationAssertion(rdfs:label obo:COCHO_4-31G "4-31G Basis Set"@en)
+SubClassOf(obo:COCHO_4-31G obo:COCHO_SplitValencePopleBasisSet)
+
+# Class: obo:COCHO_6-311G (6-311G Basis Set)
+
+AnnotationAssertion(rdfs:comment obo:COCHO_6-311G "A class for the Pople split valence 6-311G basis set."@en)
+AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_6-311G <http://chemicalsemantics.com/>)
+AnnotationAssertion(rdfs:label obo:COCHO_6-311G "6-311G Basis Set"@en)
+SubClassOf(obo:COCHO_6-311G obo:COCHO_SplitValencePopleBasisSet)
+
+# Class: obo:COCHO_6-311GS (6-311G* Basis Set)
+
+AnnotationAssertion(rdfs:comment obo:COCHO_6-311GS "A class for the Pople split valence 6-311G* basis set."@en)
+AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_6-311GS <http://chemicalsemantics.com/>)
+AnnotationAssertion(rdfs:label obo:COCHO_6-311GS "6-311G* Basis Set"@en)
+SubClassOf(obo:COCHO_6-311GS obo:COCHO_PolarizedPopleBasisSet)
+SubClassOf(obo:COCHO_6-311GS obo:COCHO_SplitValencePopleBasisSet)
+
+# Class: obo:COCHO_6-311pGS (6-311+G* Basis Set)
+
+AnnotationAssertion(rdfs:comment obo:COCHO_6-311pGS "A class for the Pople split valence 6-311+G* basis set."@en)
+AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_6-311pGS <http://chemicalsemantics.com/>)
+AnnotationAssertion(rdfs:label obo:COCHO_6-311pGS "6-311+G* Basis Set"@en)
+SubClassOf(obo:COCHO_6-311pGS obo:COCHO_DiffusePopleBasisSet)
+SubClassOf(obo:COCHO_6-311pGS obo:COCHO_PolarizedPopleBasisSet)
+SubClassOf(obo:COCHO_6-311pGS obo:COCHO_SplitValencePopleBasisSet)
+
+# Class: obo:COCHO_6-31G (6-31G Basis Set)
+
+AnnotationAssertion(rdfs:comment obo:COCHO_6-31G "A class for the Pople split valence 6-31G basis set."@en)
+AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_6-31G <http://chemicalsemantics.com/>)
+AnnotationAssertion(rdfs:label obo:COCHO_6-31G "6-31G Basis Set"@en)
+SubClassOf(obo:COCHO_6-31G obo:COCHO_SplitValencePopleBasisSet)
+
+# Class: obo:COCHO_6-31GS (6-31G* Basis Set)
+
+AnnotationAssertion(rdfs:comment obo:COCHO_6-31GS "A class for the Pople polarization split valence 6-31G* basis set."@en)
+AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_6-31GS <http://chemicalsemantics.com/>)
+AnnotationAssertion(rdfs:label obo:COCHO_6-31GS "6-31G* Basis Set"@en)
+SubClassOf(obo:COCHO_6-31GS obo:COCHO_PolarizedPopleBasisSet)
+SubClassOf(obo:COCHO_6-31GS obo:COCHO_SplitValencePopleBasisSet)
+
+# Class: obo:COCHO_6-31GSS (6-31G** Basis Set)
+
+AnnotationAssertion(rdfs:comment obo:COCHO_6-31GSS "A class for the Pople polarization split valence 6-31G** basis set."@en)
+AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_6-31GSS <http://chemicalsemantics.com/>)
+AnnotationAssertion(rdfs:label obo:COCHO_6-31GSS "6-31G** Basis Set"@en)
+SubClassOf(obo:COCHO_6-31GSS obo:COCHO_PolarizedPopleBasisSet)
+SubClassOf(obo:COCHO_6-31GSS obo:COCHO_SplitValencePopleBasisSet)
+
+# Class: obo:COCHO_6-31pGS (6-31+G* Basis Set)
+
+AnnotationAssertion(rdfs:comment obo:COCHO_6-31pGS "A class for the Pople polarization split valence 6-31+G* basis set."@en)
+AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_6-31pGS <http://chemicalsemantics.com/>)
+AnnotationAssertion(rdfs:label obo:COCHO_6-31pGS "6-31+G* Basis Set"@en)
+SubClassOf(obo:COCHO_6-31pGS obo:COCHO_DiffusePopleBasisSet)
+SubClassOf(obo:COCHO_6-31pGS obo:COCHO_PolarizedPopleBasisSet)
+SubClassOf(obo:COCHO_6-31pGS obo:COCHO_SplitValencePopleBasisSet)
 
 # Class: obo:COCHO_AbInitioScf (Ab initio SCF)
 
@@ -1885,7 +1982,7 @@ AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_Aromatic <http://chemicalsemantic
 AnnotationAssertion(rdfs:label obo:COCHO_Aromatic "Aromatic Bond"@en)
 SubClassOf(obo:COCHO_Aromatic obo:COCHO_NormalBond)
 
-# Class: obo:COCHO_Atom (Atom)
+# Class: obo:COCHO_Atom (Atoms)
 
 AnnotationAssertion(rdfs:comment obo:COCHO_Atom "A class for Atom."@en)
 AnnotationAssertion(rdfs:comment obo:COCHO_Atom "A class for atoms, the basic unit of matter."@en)
@@ -2272,7 +2369,7 @@ AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_ChemicalShift <http://chemicalsem
 AnnotationAssertion(rdfs:label obo:COCHO_ChemicalShift "Chemical Shift"@en)
 SubClassOf(obo:COCHO_ChemicalShift obo:COCHO_CalculatedAtomProperties)
 
-# Class: obo:COCHO_ComputationalChemistryPublication (ComputationalChemistryPublication)
+# Class: obo:COCHO_ComputationalChemistryPublication (Computational Chemistry Publication)
 
 AnnotationAssertion(rdfs:comment obo:COCHO_ComputationalChemistryPublication "A class for ComputationalChemistryPublication."@en)
 AnnotationAssertion(rdfs:comment obo:COCHO_ComputationalChemistryPublication "A class for publication of the results of the computional chemistry programs."@en)
@@ -2432,7 +2529,7 @@ AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_ElectronicEnergy <http://chemical
 AnnotationAssertion(rdfs:label obo:COCHO_ElectronicEnergy "Electronic Energy"@en)
 SubClassOf(obo:COCHO_ElectronicEnergy obo:COCHO_SystemEnergies)
 
-# Class: obo:COCHO_ElectronicSpectra (Electronic Spectra)
+# Class: obo:COCHO_ElectronicSpectra (ElectronicSpectra)
 
 AnnotationAssertion(rdfs:comment obo:COCHO_ElectronicSpectra "A class for ElectronicSpectra."@en)
 AnnotationAssertion(rdfs:comment obo:COCHO_ElectronicSpectra "A class for spectra resulting from the molecular electronic transitions."@en)
@@ -2505,7 +2602,7 @@ AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_Frequency <http://chemicalsemanti
 AnnotationAssertion(rdfs:label obo:COCHO_Frequency "Frequency"@en)
 SubClassOf(obo:COCHO_Frequency obo:COCHO_GainesvilleCoreTerm)
 
-# Class: obo:COCHO_FrequencyPeak (Frequency Peak)
+# Class: obo:COCHO_FrequencyPeak (FrequencyPeak)
 
 AnnotationAssertion(rdfs:comment obo:COCHO_FrequencyPeak "A class for FrequencyPeak."@en)
 AnnotationAssertion(rdfs:comment obo:COCHO_FrequencyPeak "A class representing frequency peak of the spectrum."@en)
@@ -2877,7 +2974,7 @@ AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_MolecularCalculation <http://chem
 AnnotationAssertion(rdfs:label obo:COCHO_MolecularCalculation "Molecular Calculation"@en)
 SubClassOf(obo:COCHO_MolecularCalculation obo:COCHO_GainesvilleCoreTerm)
 
-# Class: obo:COCHO_MolecularComputation (MolecularComputation)
+# Class: obo:COCHO_MolecularComputation (Molecular Computation)
 
 AnnotationAssertion(rdfs:comment obo:COCHO_MolecularComputation "A class for MolecularComputation."@en)
 AnnotationAssertion(rdfs:comment obo:COCHO_MolecularComputation "A class for the specific type of calculation (like optimization, single point, etc) conducted by a computational chemistry program."@en)
@@ -2907,7 +3004,7 @@ AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_MolecularMechanics <http://chemic
 AnnotationAssertion(rdfs:label obo:COCHO_MolecularMechanics "Molecular Mechanics"@en)
 SubClassOf(obo:COCHO_MolecularMechanics obo:COCHO_MolecularMethodology)
 
-# Class: obo:COCHO_MolecularMethodology (MolecularMethodology)
+# Class: obo:COCHO_MolecularMethodology (Molecular Methodology)
 
 AnnotationAssertion(rdfs:comment obo:COCHO_MolecularMethodology "A class for MolecularMethodology."@en)
 AnnotationAssertion(rdfs:comment obo:COCHO_MolecularMethodology "A class for general methodologies of computational chemistry."@en)
@@ -2924,7 +3021,7 @@ AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_MolecularStructureObject <http://
 AnnotationAssertion(rdfs:label obo:COCHO_MolecularStructureObject "Molecular Structure Object"@en)
 SubClassOf(obo:COCHO_MolecularStructureObject obo:COCHO_MolecularConcept)
 
-# Class: obo:COCHO_MolecularSystem (Molecular System)
+# Class: obo:COCHO_MolecularSystem (MolecularSystem)
 
 AnnotationAssertion(rdfs:comment obo:COCHO_MolecularSystem "A class for MolecularSystem."@en)
 AnnotationAssertion(rdfs:comment obo:COCHO_MolecularSystem "A class for objects related to molecular systems."@en)
@@ -3051,7 +3148,7 @@ AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_NmrShieldingIsotropic <http://che
 AnnotationAssertion(rdfs:label obo:COCHO_NmrShieldingIsotropic "NMR Shielding Isotropic"@en)
 SubClassOf(obo:COCHO_NmrShieldingIsotropic obo:COCHO_GainesvilleCoreTerm)
 
-# Class: obo:COCHO_NormalBond (Normal Bond)
+# Class: obo:COCHO_NormalBond (NormalBond)
 
 AnnotationAssertion(rdfs:comment obo:COCHO_NormalBond "A class for NormalBond."@en)
 AnnotationAssertion(rdfs:comment obo:COCHO_NormalBond "A class for covalent bond in molecules."@en)
@@ -3096,7 +3193,7 @@ AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_OPTX <http://chemicalsemantics.co
 AnnotationAssertion(rdfs:label obo:COCHO_OPTX "OPTX"@en)
 SubClassOf(obo:COCHO_OPTX obo:COCHO_ExchangeFunctional)
 
-# Class: obo:COCHO_Orbital (Orbital)
+# Class: obo:COCHO_Orbital (Orbital (1-electron wavefunction))
 
 AnnotationAssertion(rdfs:comment obo:COCHO_Orbital "A class for Orbital."@en)
 AnnotationAssertion(rdfs:comment obo:COCHO_Orbital "A class for molecular orbital (MO) - a mathematical function describing an electron in a molecule."@en)
@@ -3286,7 +3383,7 @@ AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_Quadruple <http://chemicalsemanti
 AnnotationAssertion(rdfs:label obo:COCHO_Quadruple "Quadruple"@en)
 SubClassOf(obo:COCHO_Quadruple obo:COCHO_NormalBond)
 
-# Class: obo:COCHO_QuantumMechanics (QuantumMechanics)
+# Class: obo:COCHO_QuantumMechanics (Quantum Mechanics)
 
 AnnotationAssertion(rdfs:comment obo:COCHO_QuantumMechanics "A class for Quantum Mechanical methods."@en)
 AnnotationAssertion(rdfs:comment obo:COCHO_QuantumMechanics "A class for QuantumMechanics."@en)
@@ -3491,7 +3588,7 @@ AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_Slater <http://chemicalsemantics.
 AnnotationAssertion(rdfs:label obo:COCHO_Slater "Slater"@en)
 SubClassOf(obo:COCHO_Slater obo:COCHO_ExchangeFunctional)
 
-# Class: obo:COCHO_SourcePackage (Source Package)
+# Class: obo:COCHO_SourcePackage (SourcePackage)
 
 AnnotationAssertion(rdfs:comment obo:COCHO_SourcePackage "A class for SourcePackage."@en)
 AnnotationAssertion(rdfs:comment obo:COCHO_SourcePackage "A class for quantum chemistry packages used to peform computations."@en)
@@ -3698,7 +3795,7 @@ AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_VectorValue <http://chemicalseman
 AnnotationAssertion(rdfs:label obo:COCHO_VectorValue "Vector Value"@en)
 SubClassOf(obo:COCHO_VectorValue obo:COCHO_Value)
 
-# Class: obo:COCHO_VibrationalAnalysis (Vibrational Analysis)
+# Class: obo:COCHO_VibrationalAnalysis (VibrationalAnalysis)
 
 AnnotationAssertion(rdfs:comment obo:COCHO_VibrationalAnalysis "A class for VibrationalAnalysis."@en)
 AnnotationAssertion(rdfs:comment obo:COCHO_VibrationalAnalysis "A class for the computations of vibrational spectrum of molecules."@en)
@@ -3715,7 +3812,7 @@ AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_VibrationalSpectra <http://chemic
 AnnotationAssertion(rdfs:label obo:COCHO_VibrationalSpectra "Vibrational Spectra"@en)
 SubClassOf(obo:COCHO_VibrationalSpectra obo:COCHO_Spectra)
 
-# Class: obo:COCHO_WaveFunction (Wave Function)
+# Class: obo:COCHO_WaveFunction (WaveFunction)
 
 AnnotationAssertion(rdfs:comment obo:COCHO_WaveFunction "A class for WaveFunction."@en)
 AnnotationAssertion(rdfs:comment obo:COCHO_WaveFunction "A class for the mathematical description of a quantum particle, in most practical cases of the electron."@en)
@@ -3808,102 +3905,6 @@ AnnotationAssertion(rdfs:comment obo:COCHO_jun-cc-pVDZ "A class for the jun-cc-p
 AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_jun-cc-pVDZ <http://chemicalsemantics.com/>)
 AnnotationAssertion(rdfs:label obo:COCHO_jun-cc-pVDZ "jun-cc-pVDZ Basis Set"@en)
 SubClassOf(obo:COCHO_jun-cc-pVDZ obo:COCHO_CCDoubleZeta)
-
-# Class: obo:COCHO_3-21G (3-21G Basis Set)
-
-AnnotationAssertion(rdfs:comment obo:COCHO_3-21G "A class for the Pople split valence 3-21G basis set."@en)
-AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_3-21G <http://chemicalsemantics.com/>)
-AnnotationAssertion(rdfs:label obo:COCHO_3-21G "3-21G Basis Set"@en)
-SubClassOf(obo:COCHO_3-21G obo:COCHO_SplitValencePopleBasisSet)
-
-# Class: obo:COCHO_3-21GS (3-21G* Basis Set)
-
-AnnotationAssertion(rdfs:comment obo:COCHO_3-21GS "A class for the Pople polarization split valence 3-21G* basis set."@en)
-AnnotationAssertion(rdfs:comment obo:COCHO_3-21GS "A class for the Pople split valence 3-21G* basis set."@en)
-AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_3-21GS <http://chemicalsemantics.com/>)
-AnnotationAssertion(rdfs:label obo:COCHO_3-21GS "3-21G* Basis Set"@en)
-SubClassOf(obo:COCHO_3-21GS obo:COCHO_PolarizedPopleBasisSet)
-SubClassOf(obo:COCHO_3-21GS obo:COCHO_SplitValencePopleBasisSet)
-
-# Class: obo:COCHO_3-21pG (3-21+G Basis Set)
-
-AnnotationAssertion(rdfs:comment obo:COCHO_3-21pG "A class for the Pople split valence 3-21+G basis set."@en)
-AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_3-21pG <http://chemicalsemantics.com/>)
-AnnotationAssertion(rdfs:label obo:COCHO_3-21pG "3-21+G Basis Set"@en)
-SubClassOf(obo:COCHO_3-21pG obo:COCHO_DiffusePopleBasisSet)
-SubClassOf(obo:COCHO_3-21pG obo:COCHO_SplitValencePopleBasisSet)
-
-# Class: obo:COCHO_3-21pGS (3-21+G* Basis Set)
-
-AnnotationAssertion(rdfs:comment obo:COCHO_3-21pGS "A class for the Pople split valence 3-21+G* basis set."@en)
-AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_3-21pGS <http://chemicalsemantics.com/>)
-AnnotationAssertion(rdfs:label obo:COCHO_3-21pGS "3-21+G* Basis Set"@en)
-SubClassOf(obo:COCHO_3-21pGS obo:COCHO_DiffusePopleBasisSet)
-SubClassOf(obo:COCHO_3-21pGS obo:COCHO_PolarizedPopleBasisSet)
-SubClassOf(obo:COCHO_3-21pGS obo:COCHO_SplitValencePopleBasisSet)
-
-# Class: obo:COCHO_4-31G (4-31G Basis Set)
-
-AnnotationAssertion(rdfs:comment obo:COCHO_4-31G "A class for the Pople split valence 4-31G basis set."@en)
-AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_4-31G <http://chemicalsemantics.com/>)
-AnnotationAssertion(rdfs:label obo:COCHO_4-31G "4-31G Basis Set"@en)
-SubClassOf(obo:COCHO_4-31G obo:COCHO_SplitValencePopleBasisSet)
-
-# Class: obo:COCHO_6-31G (6-31G Basis Set)
-
-AnnotationAssertion(rdfs:comment obo:COCHO_6-31G "A class for the Pople split valence 6-31G basis set."@en)
-AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_6-31G <http://chemicalsemantics.com/>)
-AnnotationAssertion(rdfs:label obo:COCHO_6-31G "6-31G Basis Set"@en)
-SubClassOf(obo:COCHO_6-31G obo:COCHO_SplitValencePopleBasisSet)
-
-# Class: obo:COCHO_6-31GS (6-31G* Basis Set)
-
-AnnotationAssertion(rdfs:comment obo:COCHO_6-31GS "A class for the Pople polarization split valence 6-31G* basis set."@en)
-AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_6-31GS <http://chemicalsemantics.com/>)
-AnnotationAssertion(rdfs:label obo:COCHO_6-31GS "6-31G* Basis Set"@en)
-SubClassOf(obo:COCHO_6-31GS obo:COCHO_PolarizedPopleBasisSet)
-SubClassOf(obo:COCHO_6-31GS obo:COCHO_SplitValencePopleBasisSet)
-
-# Class: obo:COCHO_6-31GSS (6-31G** Basis Set)
-
-AnnotationAssertion(rdfs:comment obo:COCHO_6-31GSS "A class for the Pople polarization split valence 6-31G** basis set."@en)
-AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_6-31GSS <http://chemicalsemantics.com/>)
-AnnotationAssertion(rdfs:label obo:COCHO_6-31GSS "6-31G** Basis Set"@en)
-SubClassOf(obo:COCHO_6-31GSS obo:COCHO_PolarizedPopleBasisSet)
-SubClassOf(obo:COCHO_6-31GSS obo:COCHO_SplitValencePopleBasisSet)
-
-# Class: obo:COCHO_6-31pGS (6-31+G* Basis Set)
-
-AnnotationAssertion(rdfs:comment obo:COCHO_6-31pGS "A class for the Pople polarization split valence 6-31+G* basis set."@en)
-AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_6-31pGS <http://chemicalsemantics.com/>)
-AnnotationAssertion(rdfs:label obo:COCHO_6-31pGS "6-31+G* Basis Set"@en)
-SubClassOf(obo:COCHO_6-31pGS obo:COCHO_DiffusePopleBasisSet)
-SubClassOf(obo:COCHO_6-31pGS obo:COCHO_PolarizedPopleBasisSet)
-SubClassOf(obo:COCHO_6-31pGS obo:COCHO_SplitValencePopleBasisSet)
-
-# Class: obo:COCHO_6-311G (6-311G Basis Set)
-
-AnnotationAssertion(rdfs:comment obo:COCHO_6-311G "A class for the Pople split valence 6-311G basis set."@en)
-AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_6-311G <http://chemicalsemantics.com/>)
-AnnotationAssertion(rdfs:label obo:COCHO_6-311G "6-311G Basis Set"@en)
-SubClassOf(obo:COCHO_6-311G obo:COCHO_SplitValencePopleBasisSet)
-
-# Class: obo:COCHO_6-311GS (6-311G* Basis Set)
-
-AnnotationAssertion(rdfs:comment obo:COCHO_6-311GS "A class for the Pople split valence 6-311G* basis set."@en)
-AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_6-311GS <http://chemicalsemantics.com/>)
-AnnotationAssertion(rdfs:label obo:COCHO_6-311GS "6-311G* Basis Set"@en)
-SubClassOf(obo:COCHO_6-311GS obo:COCHO_PolarizedPopleBasisSet)
-SubClassOf(obo:COCHO_6-311GS obo:COCHO_SplitValencePopleBasisSet)
-
-# Class: obo:COCHO_6-311pGS (6-311+G* Basis Set)
-
-AnnotationAssertion(rdfs:comment obo:COCHO_6-311pGS "A class for the Pople split valence 6-311+G* basis set."@en)
-AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_6-311pGS <http://chemicalsemantics.com/>)
-AnnotationAssertion(rdfs:label obo:COCHO_6-311pGS "6-311+G* Basis Set"@en)
-SubClassOf(obo:COCHO_6-311pGS obo:COCHO_DiffusePopleBasisSet)
-SubClassOf(obo:COCHO_6-311pGS obo:COCHO_PolarizedPopleBasisSet)
-SubClassOf(obo:COCHO_6-311pGS obo:COCHO_SplitValencePopleBasisSet)
 
 
 ############################
@@ -4050,12 +4051,11 @@ AnnotationAssertion(rdfs:isDefinedBy obo:COCHO_kmPerMol <http://chemicalsemantic
 AnnotationAssertion(rdfs:label obo:COCHO_kmPerMol "kilo grap per mol"@en)
 ClassAssertion(qudt:ChemistryUnit obo:COCHO_kmPerMol)
 
-# Individual: obo:COCHO_Mm+ (Mm+)
+# Individual: <http://purl.obolibrary.org/obo/COCHO_Mm+> (Mm+)
 
-AnnotationAssertion(rdfs:comment obo:COCHO_Mm+ "MM+ force field."@en)
-AnnotationAssertion(rdfs:label obo:COCHO_Mm+ "Mm+")
-ClassAssertion(obo:COCHO_ForceField obo:COCHO_Mm+)
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/COCHO_Mm+> "MM+ force field."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/COCHO_Mm+> "Mm+")
+ClassAssertion(obo:COCHO_ForceField <http://purl.obolibrary.org/obo/COCHO_Mm+>)
 
 
-SubObjectPropertyOf(ObjectPropertyChain(obo:COCHO_hasResidue obo:COCHO_hasAtom) obo:COCHO_hasAtom)
 )
