@@ -1256,12 +1256,11 @@ AnnotationAssertion(rdfs:label obo:COCHO_hasSingleReferenceStateType "Single Ref
 SubObjectPropertyOf(obo:COCHO_hasSingleReferenceStateType obo:COCHO_extraGCObjectProperty)
 ObjectPropertyDomain(obo:COCHO_hasSingleReferenceStateType obo:COCHO_QuantumMechanics)
 
-# Object Property: obo:COCHO_hasSource (Source of calculations (software))
+# Object Property: obo:COCHO_hasSource (has source)
 
 AnnotationAssertion(rdfs:comment obo:COCHO_hasSource "A property that describes softare package"@en)
 AnnotationAssertion(rdfs:comment obo:COCHO_hasSource "A property that reports what software package was used")
-AnnotationAssertion(rdfs:label obo:COCHO_hasSource "Source"@en)
-AnnotationAssertion(rdfs:label obo:COCHO_hasSource "Source of calculations (software)"@en)
+AnnotationAssertion(rdfs:label obo:COCHO_hasSource "has source"@en)
 SubObjectPropertyOf(obo:COCHO_hasSource obo:COCHO_extraGCObjectProperty)
 ObjectPropertyDomain(obo:COCHO_hasSource obo:COCHO_ComputationalChemistryPublication)
 
@@ -1590,10 +1589,10 @@ SubDataPropertyOf(obo:COCHO_hasLastName obo:COCHO_hasPublicationData)
 DataPropertyDomain(obo:COCHO_hasLastName obo:COCHO_Author)
 DataPropertyRange(obo:COCHO_hasLastName xsd:string)
 
-# Data Property: obo:COCHO_hasMass (Mass of a molecular entity)
+# Data Property: obo:COCHO_hasMass (has mass)
 
 AnnotationAssertion(rdfs:comment obo:COCHO_hasMass "A property ..."@en)
-AnnotationAssertion(rdfs:label obo:COCHO_hasMass "has Mass of a molecular entity"@en)
+AnnotationAssertion(rdfs:label obo:COCHO_hasMass "has mass"@en)
 DataPropertyDomain(obo:COCHO_hasMass ObjectUnionOf(obo:COCHO_Atom obo:COCHO_MolecularSystem obo:COCHO_Molecule))
 DataPropertyRange(obo:COCHO_hasMass xsd:float)
 
